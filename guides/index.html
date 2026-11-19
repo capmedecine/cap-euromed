@@ -32,6 +32,13 @@ priority: 0.7
         <span class="dest-go">Lire le guide<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
       </a>
       {%- endfor %}
+      {%- for g in site.data.guides_a_venir %}
+      <div class="guide-card soon" data-reveal>
+        <span class="soon-badge">En cours de création</span>
+        <h2>{{ g.title }}</h2>
+        <p>{{ g.excerpt }}</p>
+      </div>
+      {%- endfor %}
     </div>
   </div>
 </section>

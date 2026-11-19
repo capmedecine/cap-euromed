@@ -655,3 +655,8 @@ html[lang="en"] .price{gap:1px}
 @media (hover:hover){.guide-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md)}.guide-card:hover .dest-go .ic{transform:translateX(4px)}}
 .fee-note a{color:var(--ink);font-weight:500;text-underline-offset:3px}
 .faq-a a{color:var(--ink);text-underline-offset:3px}
+.guide-card.soon{background:transparent;box-shadow:none;border:2px dashed rgba(3,3,2,.22)}
+.guide-card.soon h2{color:var(--graphite)}
+.soon-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--marigold);font-size:14px;font-weight:500;color:var(--ink)}
+.soon-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--papaya);animation:pulse 2.6s var(--ease) infinite}
+@media (hover:hover){.guide-card.soon:hover{transform:none;box-shadow:none}}

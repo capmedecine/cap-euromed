@@ -1,0 +1,5 @@
+# Guides annoncés sur /guides/ avec la mention « En cours de création » (pas de page, pas de lien).
+# Quand un guide est rédigé : le créer dans _guides/ et retirer son bloc ici.
+- title: "Test d'entrée de l'UPJŠ : format, matières et préparation"
+  category: "Admission"
+  excerpt: "Format du QCM, matières, banque de questions, calendrier et conseils de préparation, par des étudiants qui l'ont passé."
