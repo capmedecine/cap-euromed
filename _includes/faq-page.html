@@ -1,0 +1,62 @@
+{%- comment -%}
+  Page FAQ (FR : /faq/, EN : /en/faq/). Questions et réponses : _data/faq.yml.
+  Les données structurées FAQPage sont générées à partir des mêmes données que la liste visible.
+{%- endcomment -%}
+{%- assign groups = site.data.faq[page.lang] -%}
+{%- if page.lang == "en" -%}
+  {%- assign home = "/en/" -%}{%- assign home_name = "Home" -%}{%- assign crumbs_label = "Breadcrumb" -%}{%- assign toc_title = "Contents" -%}
+{%- else -%}
+  {%- assign home = "/" -%}{%- assign home_name = "Accueil" -%}{%- assign crumbs_label = "Fil d'Ariane" -%}{%- assign toc_title = "Sommaire" -%}
+{%- endif -%}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": {{ home_name | jsonify }}, "item": "{{ site.url }}{{ home }}"},
+  {"@type": "ListItem", "position": 2, "name": "FAQ", "item": "{{ site.url }}{{ page.url }}"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+{%- assign first = true -%}
+{%- for g in groups -%}{%- for f in g.items -%}
+{%- unless first %}, {% endunless -%}{%- assign first = false -%}
+{"@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | strip_html | jsonify }}}}
+{%- endfor -%}{%- endfor -%}]}
+</script>
+
+<section class="g-hero" aria-labelledby="page-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="{{ crumbs_label }}"><a href="{{ home }}">{{ home_name }}</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">FAQ</span></nav>
+    <span class="tag" style="--dot:var(--peri)">{{ page.tag }}</span>
+    <h1 id="page-title">{{ page.h1 }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+  </div>
+  <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
+</section>
+
+<div class="wrap g-layout">
+  <nav class="toc" aria-label="{{ toc_title }}">
+    <p class="toc-title">{{ toc_title }}</p>
+    <ol>
+      {%- for g in groups %}
+      <li><a href="#{{ g.id }}">{{ g.title }}</a></li>
+      {%- endfor %}
+    </ol>
+  </nav>
+  <div class="prose faq-page">
+    {%- for g in groups %}
+    <h2 id="{{ g.id }}">{{ g.title }}</h2>
+    <div class="faq-list">
+      {%- for f in g.items %}
+      <details>
+        <summary>{{ f.q }}<span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>{{ f.a }}</p></div>
+      </details>
+      {%- endfor %}
+    </div>
+    {%- endfor %}
+    {%- if page.more_html %}
+    <p class="faq-more">{{ page.more_html }}</p>
+    {%- endif %}
+  </div>
+</div>
+
+{% include cta-contact.html %}

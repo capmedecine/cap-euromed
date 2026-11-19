@@ -7,6 +7,11 @@
   const locale = html.lang === 'en' ? 'en-GB' : 'fr-FR';
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const $ = (sel) => d.querySelector(sel), $$ = (sel) => [...d.querySelectorAll(sel)];
+
+  /* Anciennes ancres de l'accueil (/#equipe, /#faq) : redirection vers leurs pages */
+  const moved = { '/': { equipe: '/equipe/', faq: '/faq/' }, '/en/': { equipe: '/en/team/', faq: '/en/faq/' } }[location.pathname];
+  if (moved && moved[location.hash.slice(1)]) { location.replace(moved[location.hash.slice(1)]); return; }
+
   requestAnimationFrame(() => requestAnimationFrame(() => html.classList.add('ready')));
 
   /* Apparition au scroll */
@@ -103,7 +108,7 @@
     d.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
 
-  /* Lien actif dans la navigation (ancres de la page courante, ex. /#faq sur l'accueil) */
+  /* Lien actif dans la navigation (ancres de la page courante, ex. /#destinations sur l'accueil) */
   const links = new Map($$('.nav-links a').filter((a) => a.hash && a.pathname === location.pathname).map((a) => [a.hash.slice(1), a]));
   if (links.size) {
     const spy = new IntersectionObserver((entries) => entries.forEach((e) => {

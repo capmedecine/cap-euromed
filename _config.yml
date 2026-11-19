@@ -2,7 +2,7 @@
 title: Cap EuroMed
 url: "https://cap-euromed.fr"
 # Incrémenter quand site.css ou site.js change (force le rechargement chez les visiteurs)
-asset_version: 8
+asset_version: 9
 # Mesure d'audience sans cookies : mettre "cap-euromed.fr" une fois le compte Plausible créé
 plausible_domain: ""
 exclude:

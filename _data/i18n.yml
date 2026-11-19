@@ -11,6 +11,16 @@ fr:
   wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%20%C3%A0%20l%27%C3%A9tranger%20%21"
   wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%20%C3%A0%20l%27%C3%A9tranger.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F"
   wa_float_label: Nous écrire sur WhatsApp
+  # Carte postale « Contact » en bas de page (_includes/cta-contact.html)
+  cta_tag: "Prêt à te lancer&#8239;?"
+  cta_title_html: "Pose-nous tes questions, <em>c'est gratuit.</em>"
+  cta_lead: "Un conseiller Cap EuroMed te répond sur WhatsApp dans les meilleurs délais. Aucun engagement, juste des réponses claires."
+  cta_button: "Démarrer sur WhatsApp"
+  cta_photo_alt: "Le Théâtre national de Košice et sa fontaine chantante"
+  cta_assure:
+    - "Réponse sous 24h"
+    - "Consultation 100&nbsp;% gratuite"
+    - "Sans engagement"
   nav:
     - label: Destinations
       href: /#destinations
@@ -18,10 +28,12 @@ fr:
       href: /universites/upjs-kosice/
     - label: Accompagnement
       href: /#accompagnement
+    - label: Équipe
+      href: /equipe/
     - label: Guides
       href: /guides/
     - label: FAQ
-      href: /#faq
+      href: /faq/
   footer_about: "Agence d'accompagnement pour les études de médecine et de dentaire en Europe, en anglais."
   footer_wa: "WhatsApp : +33 7 83 11 91 80"
   footer_nav_label: Liens du pied de page
@@ -53,6 +65,15 @@ en:
   wa_short: "https://wa.me/33783119180?text=Hello%2C%20I%27m%20interested%20in%20studying%20medicine%20abroad%21"
   wa_long: "https://wa.me/33783119180?text=Hello%20Cap%20EuroMed%20%F0%9F%91%8B%20I%27m%20interested%20in%20studying%20medicine%20abroad.%20Could%20you%20tell%20me%20more%3F"
   wa_float_label: Message us on WhatsApp
+  cta_tag: "Ready to take the leap?"
+  cta_title_html: "Ask us anything, <em>it's free.</em>"
+  cta_lead: "A Cap EuroMed advisor will reply on WhatsApp as soon as possible. No commitment, just clear answers."
+  cta_button: "Start on WhatsApp"
+  cta_photo_alt: "Košice's National Theatre and its singing fountain"
+  cta_assure:
+    - "Reply within 24h"
+    - "100% free consultation"
+    - "No commitment"
   nav:
     - label: Destinations
       href: /en/#destinations
@@ -60,8 +81,10 @@ en:
       href: /en/universities/upjs-kosice/
     - label: Our support
       href: /en/#accompagnement
+    - label: Team
+      href: /en/team/
     - label: FAQ
-      href: /en/#faq
+      href: /en/faq/
   footer_about: "Support agency for studying medicine and dentistry in Europe, in English."
   footer_wa: "WhatsApp: +33 7 83 11 91 80"
   footer_nav_label: Footer links

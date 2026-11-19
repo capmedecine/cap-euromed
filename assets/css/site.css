@@ -672,3 +672,8 @@ html[lang="en"] .price{gap:1px}
   .prose .cmp-table td:first-child{font-weight:700;padding-bottom:6px}
   .prose .cmp-table td[data-label]::before{content:attr(data-label) "\00a0: ";font-weight:500;color:#5b584c}
 }
+/* Pages Équipe et FAQ */
+.nav-links a[aria-current="page"]::after{transform:scaleX(1)}
+.g-meta a{color:inherit;text-underline-offset:3px}
+.faq-page>h2:first-child{margin-top:0}
+.faq-more{margin-top:8px;font-size:16px;color:var(--graphite)}

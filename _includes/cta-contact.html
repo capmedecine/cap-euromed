@@ -1,0 +1,29 @@
+{%- comment -%} Carte postale « Contact » (bas de page) : textes dans _data/i18n.yml (cta_*). {%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign wa_long = page.wa_long | default: t.wa_long -%}
+{%- assign cta_icons = "i-clock,i-shield-check,i-sparkles" | split: "," -%}
+<!-- ===================== CONTACT ===================== -->
+<section class="cta" id="contact" aria-labelledby="cta-title">
+  <svg class="cta-torn top" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
+  <div class="wrap">
+    <div class="postcard" data-scroll>
+      <div class="pc-photo" style="--avg:#5b5d5a">
+        <img src="/assets/img/kosice-theatre-national-fontaine-480.webp" srcset="/assets/img/kosice-theatre-national-fontaine-480.webp 480w, /assets/img/kosice-theatre-national-fontaine-960.webp 960w" sizes="(min-width:900px) 560px, 100vw" width="960" height="640" alt="{{ t.cta_photo_alt }}" loading="lazy" decoding="async">
+      </div>
+      <div class="pc-back">
+        <span class="pc-stamp" aria-hidden="true"><img src="/assets/img/kosice-cathedrale-sainte-elisabeth-400.webp" width="400" height="304" alt="" loading="lazy" decoding="async"></span>
+        <span class="postmark" aria-hidden="true"><span>KOŠICE<b>SK</b>UPJŠ</span></span>
+        <span class="tag live" style="--dot:var(--papaya)">{{ t.cta_tag }}</span>
+        <h2 class="h2" id="cta-title">{{ t.cta_title_html }}</h2>
+        <p class="lead">{{ t.cta_lead }}</p>
+        <a class="btn btn-ink btn-lg" data-cta="contact" data-magnetic href="{{ wa_long }}" target="_blank" rel="noopener"><svg class="ic wa-ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>{{ t.cta_button }}<svg class="ic go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <ul class="assure">
+          {%- for a in t.cta_assure %}
+          <li><svg class="ic" aria-hidden="true"><use href="#{{ cta_icons[forloop.index0] }}"/></svg>{{ a }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <svg class="cta-torn bottom" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
+</section>

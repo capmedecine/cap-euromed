@@ -5,10 +5,14 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 
 ## Structure
 - `_layouts/base.html` : `<head>` SEO (title, description, canonical, hreflang, Open Graph), menu, pied de page, bouton WhatsApp flottant.
-- `_includes/` : `nav.html`, `footer.html`, `lang-switch.html` (bouton FR/EN), `sprite.html` (icônes SVG).
-- `_data/i18n.yml` : textes d'interface FR/EN (menu, pied de page, liens WhatsApp, crédits photos).
+- `_includes/` : `nav.html`, `footer.html`, `lang-switch.html` (bouton FR/EN), `sprite.html` (icônes SVG),
+  `cta-contact.html` (carte postale « Contact » en bas de page), `faq-page.html` (gabarit des pages FAQ).
+- `_data/i18n.yml` : textes d'interface FR/EN (menu, pied de page, liens WhatsApp, bloc contact `cta_*`, crédits photos).
 - `_data/universites.yml` : cartes « Nos destinations » de la page d'accueil.
-- Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN), `404.html`, `sitemap.xml` (généré).
+- `_data/faq.yml` : questions/réponses de la page FAQ (FR et EN, mêmes groupes `id`). Les données structurées FAQPage en sont générées.
+- Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN),
+  `equipe/index.html` ↔ `en/team/index.html` (équipe), `faq/index.html` ↔ `en/faq/index.html` (FAQ), `404.html`, `sitemap.xml` (généré).
+  L'équipe et la FAQ ne sont plus sur l'accueil ; les anciennes ancres `/#equipe` et `/#faq` sont redirigées par `site.js`.
 - `assets/css/site.css`, `assets/js/site.js` : styles et interactions communs. Après modification, incrémenter `asset_version` dans `_config.yml`.
 - `_guides/` : collection d'articles (FR uniquement), publiés sous `/guides/<nom>/` avec le layout `_layouts/guide.html`
   (sommaire, FAQ, sources, données structurées Article). Index : `guides/index.html`.
