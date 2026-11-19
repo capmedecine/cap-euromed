@@ -660,3 +660,15 @@ html[lang="en"] .price{gap:1px}
 .soon-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;background:var(--marigold);font-size:14px;font-weight:500;color:var(--ink)}
 .soon-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--papaya);animation:pulse 2.6s var(--ease) infinite}
 @media (hover:hover){.guide-card.soon:hover{transform:none;box-shadow:none}}
+.sec-head .lead a{color:var(--ink);text-underline-offset:3px}
+/* Tableau comparatif : une carte par critère sur mobile */
+@media (max-width:640px){
+  .prose table.cmp-table{min-width:0}
+  .prose .cmp-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .prose .cmp-table,.prose .cmp-table tbody,.prose .cmp-table tr,.prose .cmp-table td{display:block}
+  .prose .cmp-table tr{padding:14px 16px;border-bottom:1px solid var(--cloud)}
+  .prose .cmp-table tr:last-child{border-bottom:0}
+  .prose .cmp-table td{padding:3px 0;border:0}
+  .prose .cmp-table td:first-child{font-weight:700;padding-bottom:6px}
+  .prose .cmp-table td[data-label]::before{content:attr(data-label) "\00a0: ";font-weight:500;color:#5b584c}
+}
