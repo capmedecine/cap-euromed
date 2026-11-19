@@ -15,4 +15,10 @@ layout: null
     {%- endif %}
   </url>
 {%- endif %}{% endfor %}
+{%- for g in site.guides %}
+  <url>
+    <loc>{{ site.url }}{{ g.url }}</loc>
+    <priority>{{ g.priority | default: 0.7 }}</priority>
+  </url>
+{%- endfor %}
 </urlset>

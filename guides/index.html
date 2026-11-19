@@ -1,0 +1,37 @@
+---
+layout: base
+lang: fr
+title: "Guides : études de médecine à l'étranger | Cap EuroMed"
+description: "Coût des études, diplôme, internat : nos guides pour préparer tes études de médecine ou de dentaire en Europe, écrits par des étudiants sur place."
+sitemap: true
+priority: 0.7
+---
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cap-euromed.fr/"},
+  {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cap-euromed.fr/guides/"}]}
+</script>
+<section class="g-hero" aria-labelledby="g-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">Guides</span></nav>
+    <span class="tag" style="--dot:var(--papaya)">Guides</span>
+    <h1 id="g-title">Nos guides pour étudier la médecine à l'étranger</h1>
+    <p class="lead">Budget, diplôme, internat, vie sur place : des réponses claires et vérifiées, écrites par des étudiants français qui sont passés par là.</p>
+  </div>
+  <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
+</section>
+<section class="section" style="padding-top:clamp(48px,6vw,80px)" aria-label="Liste des guides">
+  <div class="wrap">
+    <div class="guide-grid">
+      {%- assign guides = site.guides | sort: "date" | reverse -%}
+      {%- for g in guides %}
+      <a class="guide-card" href="{{ g.url }}" data-reveal>
+        <span class="tag" style="--dot:var(--mint)">{{ g.category }}</span>
+        <h2>{{ g.h1 }}</h2>
+        <p>{{ g.excerpt_text }}</p>
+        <span class="dest-go">Lire le guide<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

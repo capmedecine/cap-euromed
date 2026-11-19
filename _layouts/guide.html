@@ -1,0 +1,105 @@
+---
+layout: base
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign words = content | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ page.h1 | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "inLanguage": "fr",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "author": {"@type": "Organization", "name": "Cap EuroMed", "url": "https://cap-euromed.fr/"},
+  "publisher": {"@type": "Organization", "name": "Cap EuroMed", "logo": {"@type": "ImageObject", "url": "https://cap-euromed.fr/assets/favicon-192.png"}},
+  "image": "{{ site.url }}{{ page.og_image | default: t.og_image }}",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}"
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cap-euromed.fr/"},
+  {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://cap-euromed.fr/guides/"},
+  {"@type": "ListItem", "position": 3, "name": {{ page.crumb | jsonify }}, "item": "{{ site.url }}{{ page.url }}"}]}
+</script>
+{%- if page.faq %}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{%- for f in page.faq -%}{"@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | strip_html | jsonify }}}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}]}
+</script>
+{%- endif %}
+
+<section class="g-hero" aria-labelledby="g-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span class="sep" aria-hidden="true">›</span><a href="/guides/">Guides</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">{{ page.crumb }}</span></nav>
+    <span class="tag" style="--dot:var(--papaya)">{{ page.category }}</span>
+    <h1 id="g-title">{{ page.h1 }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+    <p class="g-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>{{ minutes }} min de lecture</span><span>Mis à jour le {{ page.last_modified_at | default: page.date | date: "%d/%m/%Y" }}</span><span>Par l'équipe Cap EuroMed, étudiants à l'UPJŠ</span></p>
+  </div>
+  <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
+</section>
+
+<div class="wrap g-layout">
+  <nav class="toc" aria-label="Sommaire">
+    <p class="toc-title">Sommaire</p>
+    <ol>
+      {%- for s in page.toc %}
+      <li><a href="#{{ s.id }}">{{ s.title }}</a></li>
+      {%- endfor %}
+      {%- if page.faq %}<li><a href="#questions">Questions fréquentes</a></li>{% endif %}
+    </ol>
+  </nav>
+  <article class="prose">
+{{ content }}
+    {%- if page.faq %}
+    <h2 id="questions">Questions fréquentes</h2>
+    <div class="faq-list">
+      {%- for f in page.faq %}
+      <details>
+        <summary>{{ f.q }}<span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>{{ f.a }}</p></div>
+      </details>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+
+    <aside class="g-cta">
+      <p class="g-cta-title">Une question sur ta situation&#8239;?</p>
+      <p>Notre équipe d'étudiants français sur place te répond sur WhatsApp, gratuitement et sans engagement.</p>
+      <a class="btn btn-ink" data-cta="guide" data-magnetic href="{{ t.wa_long }}" target="_blank" rel="noopener"><svg class="ic wa-ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>Poser ma question</a>
+    </aside>
+
+    {%- if page.sources %}
+    <section class="g-sources" aria-labelledby="sources">
+      <h2 id="sources">Sources</h2>
+      <ul>
+        {%- for s in page.sources %}
+        <li><a href="{{ s.url }}" rel="nofollow noopener" target="_blank">{{ s.title }}</a></li>
+        {%- endfor %}
+      </ul>
+    </section>
+    {%- endif %}
+  </article>
+</div>
+
+{%- assign others = site.guides | where_exp: "g", "g.url != page.url" -%}
+{%- if others.size > 0 %}
+<section class="section g-related" aria-labelledby="related-title">
+  <div class="wrap">
+    <h2 class="h2" id="related-title">À lire aussi</h2>
+    <div class="guide-grid">
+      {%- for g in others %}
+      <a class="guide-card" href="{{ g.url }}">
+        <span class="tag" style="--dot:var(--mint)">{{ g.category }}</span>
+        <h3>{{ g.h1 }}</h3>
+        <p>{{ g.excerpt_text }}</p>
+        <span class="dest-go">Lire le guide<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}

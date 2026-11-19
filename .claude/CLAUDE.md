@@ -10,6 +10,8 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 - `_data/universites.yml` : cartes « Nos destinations » de la page d'accueil.
 - Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN), `404.html`, `sitemap.xml` (généré).
 - `assets/css/site.css`, `assets/js/site.js` : styles et interactions communs. Après modification, incrémenter `asset_version` dans `_config.yml`.
+- `_guides/` : collection d'articles (FR uniquement), publiés sous `/guides/<nom>/` avec le layout `_layouts/guide.html`
+  (sommaire, FAQ, sources, données structurées Article). Index : `guides/index.html`.
 - `_brouillons/` : non publié (Jekyll ignore les dossiers en `_`). Contient la page mentions légales en attente des infos de l'éditeur.
 
 ## Front matter d'une page
@@ -36,3 +38,9 @@ jekyll build -s . -d /tmp/_site   # puis servir /tmp/_site avec un serveur stati
   frais « fixés chaque année par l'université » ; pas de mention « université partenaire ».
 - Photos Wikimedia sous CC BY-SA : garder les crédits dans le pied de page.
 - Mesure d'audience : renseigner `plausible_domain` dans `_config.yml` quand le compte Plausible existe (pas de cookies, pas de bandeau).
+
+## Ajouter un guide
+Créer `_guides/<slug>.html` avec en front matter : `title` (≤ 60), `description` (≤ 155), `h1`, `crumb`, `category`, `lead`,
+`excerpt_text`, `date`, `last_modified_at`, `toc` (id + titre de chaque `<h2 id>`), `faq` (q/a), `sources` (title/url).
+Le contenu commence par un encadré `<div class="answer">` (réponse directe), puis des `<h2 id>` correspondant au `toc`.
+Ajouter des liens internes vers le guide depuis les pages concernées. Le menu « Guides » et le sitemap se mettent à jour seuls.
