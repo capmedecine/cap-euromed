@@ -468,8 +468,6 @@ details[open] .pm{rotate:45deg;background:var(--mint)}
 .postcard{position:relative;display:grid;background:#fffdf8;border-radius:12px;box-shadow:var(--sh-xl),0 40px 80px -40px rgba(0,40,70,.35);overflow:hidden;rotate:calc(-5deg*(1 - min(1,var(--p,.5)*2)));translate:0 calc(40px*(1 - min(1,var(--p,.5)*2)))}
 .pc-photo{position:relative;min-height:280px;background:var(--avg,#5b5d5a)}
 .pc-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pc-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 40%,rgba(0,0,0,.45))}
-.pc-title{position:absolute;z-index:1;left:24px;bottom:22px;color:#fff;font:italic 400 clamp(30px,3.4vw,44px)/1 var(--serif);letter-spacing:-.04em;text-shadow:0 2px 14px rgba(0,0,0,.35)}
 .pc-back{position:relative;padding:34px 26px 34px}
 .pc-stamp{position:absolute;top:22px;right:22px;width:84px;height:100px;padding:7px;background:#fff;rotate:4deg;filter:drop-shadow(0 3px 5px rgba(0,0,0,.18));--r:4px;-webkit-mask:radial-gradient(var(--r),#0000 97%,#000) round calc(-1.5*var(--r)) calc(-1.5*var(--r))/calc(3*var(--r)) calc(3*var(--r)),linear-gradient(#000 0 0) no-repeat 50%/calc(100% - 3*var(--r)) calc(100% - 3*var(--r));mask:radial-gradient(var(--r),#0000 97%,#000) round calc(-1.5*var(--r)) calc(-1.5*var(--r))/calc(3*var(--r)) calc(3*var(--r)),linear-gradient(#000 0 0) no-repeat 50%/calc(100% - 3*var(--r)) calc(100% - 3*var(--r));transition:rotate .6s var(--spring)}
 .pc-stamp img{width:100%;height:100%;object-fit:cover}
