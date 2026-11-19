@@ -1,0 +1,12 @@
+# Configuration Jekyll (GitHub Pages construit le site automatiquement à chaque push)
+title: Cap EuroMed
+url: "https://cap-euromed.fr"
+# Incrémenter quand site.css ou site.js change (force le rechargement chez les visiteurs)
+asset_version: 4
+# Mesure d'audience sans cookies : mettre "cap-euromed.fr" une fois le compte Plausible créé
+plausible_domain: ""
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules

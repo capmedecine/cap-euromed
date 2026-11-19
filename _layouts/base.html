@@ -1,0 +1,66 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign wa_short = page.wa_short | default: t.wa_short -%}
+{%- if page.lang == "en" -%}{%- assign en_url = page.url -%}{%- assign fr_url = page.alt_url -%}{%- else -%}{%- assign fr_url = page.url -%}{%- assign en_url = page.alt_url -%}{%- endif -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+{%- if page.verification %}
+<meta name="google-site-verification" content="FFKxTzdqLYTJ6AxooDaFtpbpm-GWkRsFUtb7DnsYp9E">
+<meta name="google-site-verification" content="Z9Bg8sprHRNb0QvH_Jsww0wZk60BzYygyIo0jZ0A_Lg">
+{%- endif %}
+<meta name="author" content="Cap EuroMed">
+<meta name="robots" content="{{ page.robots | default: 'index, follow, max-image-preview:none' }}">
+<meta name="theme-color" content="#9ed4ef">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{%- if page.alt_url %}
+<link rel="alternate" hreflang="fr" href="{{ site.url }}{{ fr_url }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ en_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ fr_url }}">
+{%- endif %}
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon-192.png" sizes="192x192" type="image/png">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ page.og_title | default: page.title | escape }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | escape }}">
+<meta property="og:image" content="{{ site.url }}{{ page.og_image | default: t.og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ t.og_locale }}">
+<meta property="og:locale:alternate" content="{{ t.og_locale_alt }}">
+<meta property="og:site_name" content="Cap EuroMed">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.og_title | default: page.title | escape }}">
+<meta name="twitter:description" content="{{ page.og_description | default: page.description | escape }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page.og_image | default: t.og_image }}">
+<link rel="preload" href="/assets/fonts/lora-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v={{ site.asset_version }}">
+{%- if site.plausible_domain != "" %}
+<script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
+{%- endif %}
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/js/site.js?v={{ site.asset_version }}" defer></script>
+</head>
+<body>
+<a class="skip" href="#contenu">{{ t.skip }}</a>
+{% include sprite.html %}
+{% include nav.html %}
+
+<main id="contenu">
+{{ content }}
+</main>
+
+{% include footer.html %}
+{%- unless page.no_float %}
+<a class="wa-float" data-cta="float" href="{{ wa_short }}" target="_blank" rel="noopener" aria-label="{{ t.wa_float_label }}"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+{%- endunless %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+# Universités affichées dans « Nos destinations » (page d'accueil FR et EN).
+# Pour en ajouter une : copier ce bloc, créer ses pages (voir .claude/CLAUDE.md)
+# et fournir sa photo en WebP aux largeurs 480 et 960 px.
+- id: upjs-kosice
+  image: /assets/img/faculte-medecine-upjs-kosice
+  image_w: 960
+  image_h: 720
+  image_avg: "#7f7d6d"
+  fr:
+    url: /universites/upjs-kosice/
+    place: "Slovaquie · Košice"
+    name: "Université Pavol Jozef Šafárik (UPJŠ)"
+    summary: "Médecine et dentaire enseignées entièrement en anglais, dans la 2e ville de Slovaquie. Notre équipe y étudie."
+    alt: "La faculté de médecine de l'UPJŠ à Košice"
+    facts: ["Médecine · 6 ans", "Dentaire · 5 ans", "100 % en anglais", "Test d'entrée"]
+    cta: "Découvrir l'UPJŠ"
+  en:
+    url: /en/universities/upjs-kosice/
+    place: "Slovakia · Košice"
+    name: "Pavol Jozef Šafárik University (UPJŠ)"
+    summary: "Medicine and dentistry taught entirely in English, in Slovakia's 2nd largest city. Our team studies there."
+    alt: "The UPJŠ Faculty of Medicine in Košice"
+    facts: ["Medicine · 6 years", "Dentistry · 5 years", "100% in English", "Entrance exam"]
+    cta: "Discover UPJŠ"

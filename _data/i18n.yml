@@ -1,0 +1,81 @@
+# Textes d'interface communs (menu, pied de page, boutons) — FR et EN
+fr:
+  home_url: /
+  skip: Aller au contenu
+  logo_label: "Cap EuroMed, retour à l'accueil"
+  nav_label: Navigation principale
+  lang_label: Langue
+  menu_open: Ouvrir le menu
+  menu_close: Fermer le menu
+  cta_nav: Nous contacter
+  wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%20%C3%A0%20l%27%C3%A9tranger%20%21"
+  wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%20%C3%A0%20l%27%C3%A9tranger.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F"
+  wa_float_label: Nous écrire sur WhatsApp
+  nav:
+    - label: Destinations
+      href: /#destinations
+    - label: UPJŠ Košice
+      href: /universites/upjs-kosice/
+    - label: Accompagnement
+      href: /#accompagnement
+    - label: FAQ
+      href: /#faq
+  footer_about: "Agence d'accompagnement pour les études de médecine et de dentaire en Europe, en anglais."
+  footer_wa: "WhatsApp : +33 7 83 11 91 80"
+  footer_nav_label: Liens du pied de page
+  footer_tagline: "Agence d'accompagnement étudiant"
+  other_lang: English version
+  credits_title: Crédits photos
+  og_image: /assets/og-image.jpg
+  og_locale: fr_FR
+  og_locale_alt: en_GB
+  credits_html: |
+    Photos recadrées et compressées. Via Wikimedia Commons :
+            <a href="https://commons.wikimedia.org/wiki/File:St_Elisabeth_Cathedral_Kosice.jpeg" rel="nofollow">cathédrale Sainte-Élisabeth</a> © Ingo Mehling, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Kosice_57.jpg" rel="nofollow">centre historique</a> © Scotch Mist, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Lek%C3%A1rska_fakulta_UPJ%C5%A0_Ko%C5%A1ice.jpg" rel="nofollow">faculté de médecine UPJŠ</a> © RickRichards, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Poslucharen_LF_UPJS.jpg" rel="nofollow">amphithéâtre LF UPJŠ</a> © Jozefgajdos, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Hlavn%C3%A1_ulica_-a.jpg" rel="nofollow">rue Hlavná</a> © Ladislav Luppa, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Kosice_-_State_Theatre_and_Main_Street.JPG" rel="nofollow">vue aérienne</a> © Maroš Mráz, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:National_Theatre_and_Singing_Fountain,_Kosice.jpg" rel="nofollow">Théâtre national</a> Ladislav Luppa, CC0.
+            Photos médicales : <a href="https://unsplash.com/license" rel="nofollow">Unsplash</a>.
+en:
+  home_url: /en/
+  skip: Skip to content
+  logo_label: "Cap EuroMed, back to home"
+  nav_label: Main navigation
+  lang_label: Language
+  menu_open: Open menu
+  menu_close: Close menu
+  cta_nav: Contact us
+  wa_short: "https://wa.me/33783119180?text=Hello%2C%20I%27m%20interested%20in%20studying%20medicine%20abroad%21"
+  wa_long: "https://wa.me/33783119180?text=Hello%20Cap%20EuroMed%20%F0%9F%91%8B%20I%27m%20interested%20in%20studying%20medicine%20abroad.%20Could%20you%20tell%20me%20more%3F"
+  wa_float_label: Message us on WhatsApp
+  nav:
+    - label: Destinations
+      href: /en/#destinations
+    - label: UPJŠ Košice
+      href: /en/universities/upjs-kosice/
+    - label: Our support
+      href: /en/#accompagnement
+    - label: FAQ
+      href: /en/#faq
+  footer_about: "Support agency for studying medicine and dentistry in Europe, in English."
+  footer_wa: "WhatsApp: +33 7 83 11 91 80"
+  footer_nav_label: Footer links
+  footer_tagline: "Student support agency"
+  other_lang: Version française
+  credits_title: Photo credits
+  og_image: /assets/og-image-en.jpg
+  og_locale: en_GB
+  og_locale_alt: fr_FR
+  credits_html: |
+    Photos cropped and compressed. Via Wikimedia Commons:
+            <a href="https://commons.wikimedia.org/wiki/File:St_Elisabeth_Cathedral_Kosice.jpeg" rel="nofollow">St Elisabeth Cathedral</a> © Ingo Mehling, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Kosice_57.jpg" rel="nofollow">historic centre</a> © Scotch Mist, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Lek%C3%A1rska_fakulta_UPJ%C5%A0_Ko%C5%A1ice.jpg" rel="nofollow">UPJŠ Faculty of Medicine</a> © RickRichards, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Poslucharen_LF_UPJS.jpg" rel="nofollow">UPJŠ lecture hall</a> © Jozefgajdos, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Hlavn%C3%A1_ulica_-a.jpg" rel="nofollow">Hlavná street</a> © Ladislav Luppa, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Kosice_-_State_Theatre_and_Main_Street.JPG" rel="nofollow">aerial view</a> © Maroš Mráz, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:National_Theatre_and_Singing_Fountain,_Kosice.jpg" rel="nofollow">National Theatre</a> Ladislav Luppa, CC0.
+            Medical photos: <a href="https://unsplash.com/license" rel="nofollow">Unsplash</a>.

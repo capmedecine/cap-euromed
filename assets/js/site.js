@@ -103,8 +103,8 @@
     d.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
 
-  /* Lien actif dans la navigation (liens d'ancre de la page courante) */
-  const links = new Map($$('.nav-links a[href^="#"]').map((a) => [a.getAttribute('href').slice(1), a]));
+  /* Lien actif dans la navigation (ancres de la page courante, ex. /#faq sur l'accueil) */
+  const links = new Map($$('.nav-links a').filter((a) => a.hash && a.pathname === location.pathname).map((a) => [a.hash.slice(1), a]));
   if (links.size) {
     const spy = new IntersectionObserver((entries) => entries.forEach((e) => {
       const a = links.get(e.target.id); if (!a) return;
@@ -176,5 +176,6 @@
     const label = (a.dataset.cta || 'whatsapp') + (html.lang === 'en' ? '-en' : '');
     if (typeof w.fbq === 'function') w.fbq('track', 'Contact', { content_name: label });
     if (typeof w.gtag === 'function') w.gtag('event', 'generate_lead', { method: 'whatsapp', cta: label });
+    if (typeof w.plausible === 'function') w.plausible('WhatsApp', { props: { cta: label, page: location.pathname } });
   });
 })();

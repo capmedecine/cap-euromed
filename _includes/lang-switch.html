@@ -1,0 +1,2 @@
+{%- if page.lang == "en" -%}{%- assign en_url = page.url -%}{%- assign fr_url = page.alt_url | default: "/" -%}{%- else -%}{%- assign fr_url = page.url -%}{%- assign en_url = page.alt_url | default: "/en/" -%}{%- endif -%}
+<a href="{{ fr_url }}" lang="fr" hreflang="fr"{% if page.lang == "fr" %} aria-current="page"{% else %} data-lang-switch{% endif %}>FR</a><a href="{{ en_url }}" lang="en" hreflang="en"{% if page.lang == "en" %} aria-current="page"{% else %} data-lang-switch{% endif %}>EN</a>

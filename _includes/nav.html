@@ -1,0 +1,17 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign wa_short = page.wa_short | default: t.wa_short -%}
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="{{ t.home_url }}" aria-label="{{ t.logo_label }}"><span class="logo-mark" aria-hidden="true"></span>Cap EuroMed</a>
+    <nav class="nav-links" id="menu" aria-label="{{ t.nav_label }}">
+      {%- for item in t.nav %}
+      <a href="{{ item.href }}"{% if item.href == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+      <span class="lang in-menu" role="group" aria-label="{{ t.lang_label }}">{% include lang-switch.html %}</span>
+    </nav>
+    <div class="lang in-bar" role="group" aria-label="{{ t.lang_label }}">{% include lang-switch.html %}</div>
+    <a class="btn btn-ink btn-sm nav-cta" data-cta="nav" data-magnetic href="{{ wa_short }}" target="_blank" rel="noopener"><svg class="ic wa-ic" aria-hidden="true"><use href="#i-whatsapp"/></svg><span class="label-long">{{ t.cta_nav }}</span><span class="label-short">Contact</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="{{ t.menu_open }}" data-label-open="{{ t.menu_open }}" data-label-close="{{ t.menu_close }}"><svg class="ic bars" aria-hidden="true"><use href="#i-menu"/></svg><svg class="ic x" aria-hidden="true"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+</header>

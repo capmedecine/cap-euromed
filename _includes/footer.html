@@ -1,0 +1,28 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign wa_long = page.wa_long | default: t.wa_long -%}
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="logo" href="{{ t.home_url }}"><span class="logo-mark" aria-hidden="true"></span>Cap EuroMed</a>
+      <p>{{ t.footer_about }}</p>
+      <a class="foot-wa" data-cta="footer" href="{{ wa_long }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>{{ t.footer_wa }}</a>
+    </div>
+    <nav class="foot-links" aria-label="{{ t.footer_nav_label }}">
+      {%- for item in t.nav %}
+      <a href="{{ item.href }}">{{ item.label }}</a>
+      {%- endfor %}
+      {%- if page.lang == "en" %}
+      <a href="{{ page.alt_url | default: '/' }}" lang="fr" hreflang="fr" data-lang-switch>{{ t.other_lang }}</a>
+      {%- else %}
+      <a href="{{ page.alt_url | default: '/en/' }}" lang="en" hreflang="en" data-lang-switch>{{ t.other_lang }}</a>
+      {%- endif %}
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© {{ site.time | date: "%Y" }} Cap EuroMed — {{ t.footer_tagline }}</span>
+    <details class="credits">
+      <summary>{{ t.credits_title }}</summary>
+      <p>{{ t.credits_html }}</p>
+    </details>
+  </div>
+</footer>

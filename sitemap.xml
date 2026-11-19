@@ -1,21 +1,18 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- for p in site.pages %}{% if p.sitemap %}
+  {%- if p.lang == "en" %}{% assign en = p.url %}{% assign fr = p.alt_url %}{% else %}{% assign fr = p.url %}{% assign en = p.alt_url %}{% endif %}
   <url>
-    <loc>https://cap-euromed.fr/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://cap-euromed.fr/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cap-euromed.fr/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cap-euromed.fr/"/>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <priority>{{ p.priority | default: 0.7 }}</priority>
+    {%- if p.alt_url %}
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.url }}{{ fr }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ fr }}"/>
+    {%- endif %}
   </url>
-  <url>
-    <loc>https://cap-euromed.fr/en/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://cap-euromed.fr/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cap-euromed.fr/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://cap-euromed.fr/"/>
-  </url>
+{%- endif %}{% endfor %}
 </urlset>
