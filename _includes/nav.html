@@ -5,7 +5,20 @@
     <a class="logo" href="{{ t.home_url }}" aria-label="{{ t.logo_label }}"><span class="logo-mark" aria-hidden="true"></span>Cap EuroMed</a>
     <nav class="nav-links" id="menu" aria-label="{{ t.nav_label }}">
       {%- for item in t.nav %}
+      {%- if item.children %}
+      {%- assign group_current = false -%}
+      {%- for c in item.children -%}{%- if c.href == page.url -%}{%- assign group_current = true -%}{%- endif -%}{%- endfor %}
+      <div class="nav-group{% if group_current %} is-current{% endif %}">
+        <button class="nav-drop" type="button" aria-expanded="false" aria-controls="nav-sub-{{ forloop.index }}">{{ item.label }}<svg class="ic" aria-hidden="true"><use href="#i-chevron-down"/></svg></button>
+        <div class="nav-sub" id="nav-sub-{{ forloop.index }}">
+          {%- for c in item.children %}
+          <a href="{{ c.href }}"{% if c.href == page.url %} aria-current="page"{% endif %}><span class="nav-sub-name">{{ c.label }}</span><span class="nav-sub-note">{{ c.note }}</span></a>
+          {%- endfor %}
+        </div>
+      </div>
+      {%- else %}
       <a href="{{ item.href }}"{% if item.href == page.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endif %}
       {%- endfor %}
       <span class="lang in-menu" role="group" aria-label="{{ t.lang_label }}">{% include lang-switch.html %}</span>
     </nav>

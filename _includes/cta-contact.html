@@ -12,7 +12,7 @@
       </div>
       <div class="pc-back">
         <span class="pc-stamp" aria-hidden="true"><img src="/assets/img/kosice-cathedrale-sainte-elisabeth-400.webp" width="400" height="304" alt="" loading="lazy" decoding="async"></span>
-        <span class="postmark" aria-hidden="true"><span>KOŠICE<b>SK</b>UPJŠ</span></span>
+        <span class="postmark" aria-hidden="true"><span>KOŠICE<b>SK</b>{{ page.postmark | default: "UPJŠ" }}</span></span>
         <span class="tag live" style="--dot:var(--papaya)">{{ t.cta_tag }}</span>
         <h2 class="h2" id="cta-title">{{ t.cta_title_html }}</h2>
         <p class="lead">{{ t.cta_lead }}</p>

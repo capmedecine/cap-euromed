@@ -6,18 +6,20 @@ fr:
     title: "Admission et études"
     items:
       - q: "Peut-on faire ses études de médecine à l'étranger sans PASS ni LAS ?"
-        a: "Oui. Les universités européennes qui enseignent en anglais ont leur propre sélection : sur dossier, sur test d'entrée, ou les deux selon la fac. Pas de PASS, pas de LAS, pas de numerus clausus français. Si tu sors d'un échec, lis notre guide <a href=\"/guides/echec-pass-las-que-faire/\">Échec en PASS ou en LAS : que faire ?</a>"
+        a: "Oui. Les universités européennes qui enseignent en anglais ont leur propre sélection : sur dossier, sur test d'entrée, ou les deux selon la fac. Pas de PASS, pas de LAS, pas de concours français. Si tu sors d'un échec, lis notre guide <a href=\"/guides/echec-pass-las-que-faire/\">Échec en PASS ou en LAS : que faire ?</a>"
+      - q: "Peut-on faire des études vétérinaires à l'étranger sans concours ?"
+        a: "Oui, sans passer par le concours des écoles vétérinaires françaises. À l'UVLF de Košice, l'admission se fait sur dossier et sur un test écrit de biologie et de chimie, en anglais. Tout est détaillé sur <a href=\"/universites/uvlf-kosice/\">notre page consacrée à l'UVLF</a>."
       - q: "Faut-il parler la langue du pays ?"
         a: "Pas pour les cours, qui sont entièrement en anglais. Pour les stages avec les patients, tu apprends les bases de la langue locale pendant tes études."
       - q: "Combien de temps durent les études ?"
-        a: "À l'UPJŠ de Košice, 6 ans pour la médecine et 5 ans pour le dentaire. En médecine, tu fais ensuite une spécialité (internat) pour exercer, comme un étudiant formé en France."
+        a: "À l'UPJŠ de Košice, 6 ans pour la médecine et 5 ans pour le dentaire. À l'UVLF, 6 ans pour le vétérinaire. En médecine, tu fais ensuite une spécialité (internat) pour exercer, comme un étudiant formé en France."
       - q: "Peut-on étudier la médecine en français en Europe ?"
         a: "Oui, en Belgique francophone et dans les filières francophones de plusieurs facultés roumaines. À l'UPJŠ de Košice, où on accompagne nos étudiants, les cours sont en anglais. Pour comparer, lis <a href=\"/guides/medecine-europe-slovaquie-roumanie-belgique/\">notre comparatif Slovaquie, Roumanie, Belgique</a>."
   - id: cout
     title: "Coût et vie sur place"
     items:
       - q: "Combien coûtent les études de médecine à l'étranger ?"
-        a: "Ça dépend du pays et de l'université. À l'UPJŠ de Košice, compte 13 000 € par an en médecine et 13 500 € en dentaire, plus 630 à 890 € par mois pour vivre. Tout le détail est sur <a href=\"/universites/upjs-kosice/#tarifs\">la page de l'UPJŠ</a> et dans <a href=\"/guides/cout-etudes-medecine-kosice/\">notre guide sur le coût des études à Košice</a>."
+        a: "Ça dépend du pays et de l'université. À l'UPJŠ de Košice, compte 13 000 € par an en médecine et 13 500 € en dentaire, plus 630 à 890 € par mois pour vivre. À l'UVLF, 10 000 € par an en vétérinaire pour les étudiants qui commencent en 2026/2027. Tout le détail est sur <a href=\"/universites/upjs-kosice/#tarifs\">la page de l'UPJŠ</a>, sur <a href=\"/universites/uvlf-kosice/#tarifs\">celle de l'UVLF</a> et dans <a href=\"/guides/cout-etudes-medecine-kosice/\">notre guide sur le coût des études à Košice</a>."
       - q: "Peut-on rentrer en France pendant l'année ?"
         a: "Oui. À l'UPJŠ de Košice, les cours ont lieu de mi-septembre à mi-décembre, puis de mi-février à mi-mai. Le reste de l'année est consacré aux examens, aux révisions et aux vacances : tu peux rentrer chez toi, en revenant à Košice pour passer tes examens."
   - id: diplome
@@ -25,13 +27,15 @@ fr:
     items:
       - q: "Un diplôme de médecine obtenu en Europe est-il reconnu en France ?"
         a: "Oui. Un diplôme de médecin délivré dans un pays de l'Union européenne est reconnu automatiquement en France, grâce à la directive 2005/36/CE. Comme pour un étudiant formé en France, tu fais ensuite une spécialité (internat), indispensable pour exercer comme généraliste ou spécialiste."
+      - q: "Un diplôme de vétérinaire obtenu en Europe est-il reconnu en France ?"
+        a: "Oui. Un diplôme de vétérinaire délivré dans un pays de l'Union européenne est reconnu automatiquement en France, grâce à la directive 2005/36/CE. Pour exercer, tu t'inscris ensuite au tableau de l'Ordre des vétérinaires, comme un vétérinaire diplômé en France."
       - q: "Est-ce que je pourrai faire mon internat en France ?"
         a: "Oui, c'est possible. En fin de cursus, les étudiants ressortissants de l'UE peuvent s'inscrire aux EDN puis passer les ECOS, les mêmes épreuves que les étudiants formés en France. Tu peux aussi faire ta spécialité en Slovaquie ou dans un autre pays européen. Les règles évoluent : on fait le point avec toi au moment de ton projet. Tout est détaillé dans <a href=\"/guides/medecine-etranger-revenir-en-france/\">notre guide sur le retour en France</a>."
   - id: cap-euromed
     title: "Cap EuroMed"
     items:
       - q: "Qu'est-ce que Cap EuroMed ?"
-        a: "Une agence qui accompagne les étudiants français vers une fac de médecine ou de dentaire en Europe, avec des cours en anglais. L'équipe est composée d'étudiants français actuellement sur place, à Košice : <a href=\"/equipe/\">découvre l'équipe</a>."
+        a: "Une agence qui accompagne les étudiants français vers une fac de médecine, de dentaire ou de vétérinaire en Europe, avec des cours en anglais. L'équipe est composée d'étudiants français actuellement sur place, à Košice : <a href=\"/equipe/\">découvre l'équipe</a>."
       - q: "Le premier échange est-il gratuit ?"
         a: "Oui. Le premier échange sur WhatsApp est gratuit et sans engagement : on évalue ton profil et on répond à toutes tes questions, honnêtement."
 en:
@@ -39,18 +43,20 @@ en:
     title: "Admission and studies"
     items:
       - q: "Can you study medicine abroad without PASS or LAS?"
-        a: "Yes. European universities that teach in English run their own selection: on application, through an entrance exam, or both depending on the university. No PASS, no LAS, no French numerus clausus."
+        a: "Yes. European universities that teach in English run their own selection: on application, through an entrance exam, or both depending on the university. No PASS, no LAS, no French competitive exams."
+      - q: "Can you study veterinary medicine abroad without competitive exams?"
+        a: "Yes, without sitting the French veterinary schools' competitive exam. At UVLF in Košice, admission is based on your application and a written biology and chemistry test in English. All the details are on <a href=\"/en/universities/uvlf-kosice/\">our UVLF page</a>."
       - q: "Do I need to speak the local language?"
         a: "Not for your courses, which are taught entirely in English. For placements with patients, you learn the basics of the local language during your studies."
       - q: "How long do the studies last?"
-        a: "At UPJŠ in Košice, 6 years for medicine and 5 years for dentistry. In medicine, you then complete a specialty (residency) to practise, just like a student trained in France."
+        a: "At UPJŠ in Košice, 6 years for medicine and 5 years for dentistry. At UVLF, 6 years for veterinary medicine. In medicine, you then complete a specialty (residency) to practise, just like a student trained in France."
       - q: "Can you study medicine in French in Europe?"
         a: "Yes, in French-speaking Belgium and in the French-taught programmes of several Romanian universities. At UPJŠ in Košice, where we support our students, courses are taught in English."
   - id: cout
     title: "Costs and life on site"
     items:
       - q: "How much does it cost to study medicine abroad?"
-        a: "It depends on the country and the university. At UPJŠ in Košice, allow €13,000 per year for medicine and €13,500 for dentistry, plus €630 to €890 per month to live. All the details are on <a href=\"/en/universities/upjs-kosice/#tarifs\">the UPJŠ page</a>."
+        a: "It depends on the country and the university. At UPJŠ in Košice, allow €13,000 per year for medicine and €13,500 for dentistry, plus €630 to €890 per month to live. At UVLF, allow €10,000 per year for veterinary medicine for students starting in 2026/2027. All the details are on <a href=\"/en/universities/upjs-kosice/#tarifs\">the UPJŠ page</a> and <a href=\"/en/universities/uvlf-kosice/#tarifs\">the UVLF page</a>."
       - q: "Can I go home during the year?"
         a: "Yes. At UPJŠ in Košice, classes run from mid-September to mid-December, then from mid-February to mid-May. The rest of the year is taken up by exams, revision and holidays: you can go home, coming back to Košice to sit your exams."
   - id: diplome
@@ -58,12 +64,14 @@ en:
     items:
       - q: "Is a medical degree obtained in Europe recognised in France?"
         a: "Yes. A medical degree issued in a European Union country is automatically recognised in France under Directive 2005/36/EC. As for students trained in France, you then complete a specialty (residency), which is required to practise as a GP or a specialist."
+      - q: "Is a veterinary degree obtained in Europe recognised in France?"
+        a: "Yes. A veterinary degree issued in a European Union country is automatically recognised in France under Directive 2005/36/EC. To practise, you then register with the French veterinary council (Ordre des vétérinaires), just like a vet who graduated in France."
       - q: "Can I do my residency in France?"
         a: "Yes, it is possible. At the end of their studies, EU nationals can register for the EDN and then sit the ECOS, the same exams as students trained in France. You can also specialise in Slovakia or in another European country. The rules change over time: we go through the current situation with you when you plan your project."
   - id: cap-euromed
     title: "Cap EuroMed"
     items:
       - q: "What is Cap EuroMed?"
-        a: "A support agency that helps French students get into a medical or dental school in Europe, with courses in English. The team is made up of French students currently studying on site, in Košice: <a href=\"/en/team/\">meet the team</a>."
+        a: "A support agency that helps French students get into a medical, dental or veterinary school in Europe, with courses in English. The team is made up of French students currently studying on site, in Košice: <a href=\"/en/team/\">meet the team</a>."
       - q: "Is the first conversation free?"
         a: "Yes. The first conversation on WhatsApp is free and with no commitment: we assess your profile and answer all your questions honestly."

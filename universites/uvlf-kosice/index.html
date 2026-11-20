@@ -1,0 +1,409 @@
+---
+layout: "base"
+lang: "fr"
+alt_url: "/en/universities/uvlf-kosice/"
+title: "Études vétérinaires en Slovaquie (UVLF Košice) | Cap EuroMed"
+description: "Médecine vétérinaire en anglais à l'UVLF de Košice, sans les concours français. Diplôme reconnu dans l'UE. Accompagnement de A à Z, 1er échange gratuit."
+og_title: "Études vétérinaires en Slovaquie, en anglais, à l'UVLF de Košice | Cap EuroMed"
+sitemap: true
+priority: 0.9
+postmark: "UVLF"
+wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20v%C3%A9t%C3%A9rinaires%20%C3%A0%20Ko%C5%A1ice%20%21"
+wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20v%C3%A9t%C3%A9rinaires%20%C3%A0%20l%27UVLF%20de%20Ko%C5%A1ice.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F"
+faq:
+  - q: "Peut-on faire des études vétérinaires en Slovaquie sans passer les concours français ?"
+    a: "Oui. L'UVLF de Košice a sa propre admission, sur dossier et sur un test écrit de biologie et de chimie, en anglais. Tu n'as pas à passer le concours des écoles vétérinaires françaises."
+  - q: "Comment se passe le test d'entrée de l'UVLF ?"
+    a: "C'est un test écrit en anglais, en biologie et en chimie, du niveau de la fin du lycée en Slovaquie. Il mêle questions à réponse unique, questions à choix multiples et questions ouvertes. Une expérience attestée auprès d'un vétérinaire peut te rapporter des points en plus. On te donne les dates de ta session et on te prépare."
+  - q: "Le diplôme vétérinaire de l'UVLF est-il reconnu en France ?"
+    a: "Oui. Le diplôme de vétérinaire délivré en Slovaquie est reconnu automatiquement en France et dans toute l'Union européenne, grâce à la directive 2005/36/CE. Pour exercer en France, tu t'inscris ensuite au tableau de l'Ordre des vétérinaires, comme un vétérinaire diplômé en France."
+  - q: "Combien coûtent les études vétérinaires à Košice ?"
+    a: "L'UVLF annonce 10 000 € par an pour les étudiants qui commencent en 2026/2027. Un acompte de 800 € est demandé après l'admission : il est déduit des frais de 1re année et n'est pas remboursable. Le coût de la vie à Košice est estimé entre 630 et 890 € par mois."
+  - q: "Combien de temps durent les études vétérinaires à l'UVLF ?"
+    a: "6 ans. Le programme de médecine vétérinaire générale de l'UVLF est un cursus de 6 ans, enseigné entièrement en anglais pour les étudiants internationaux."
+  - q: "Peut-on parler à des étudiants de l'UVLF avant de se lancer ?"
+    a: "Oui. Notre équipe vit à Košice et est en contact avec des étudiants de l'UVLF : ils peuvent te parler de la fac, des cours et de la vie sur place. Écris-nous sur WhatsApp pour organiser l'échange."
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign wa_short = page.wa_short | default: t.wa_short -%}
+{%- assign wa_long = page.wa_long | default: t.wa_long -%}
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+  {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cap-euromed.fr/"},
+  {"@type": "ListItem", "position": 2, "name": "UVLF Košice", "item": "https://cap-euromed.fr/universites/uvlf-kosice/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{%- for f in page.faq -%}{"@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | strip_html | jsonify }}}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}]}
+</script>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top" aria-labelledby="hero-title">
+  <span class="cloud c1" aria-hidden="true"></span><span class="cloud c2" aria-hidden="true"></span><span class="cloud c3" aria-hidden="true"></span>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <nav class="crumbs hero-fade" aria-label="Fil d'Ariane" style="--d:0s"><a href="/">Accueil</a><span class="sep" aria-hidden="true">›</span><span aria-current="page">UVLF Košice</span></nav>
+      <h1 class="display" id="hero-title">
+        <span class="tag live hero-fade" style="--dot:var(--papaya);--d:.05s">Études vétérinaires en Slovaquie</span><span class="sr-only"> : </span>
+        <span class="line" style="--i:0"><span>Vétérinaire</span></span>
+        <span class="line" style="--i:1"><span><span class="hl">en anglais, à l'UVLF</span></span></span>
+        <span class="line" style="--i:2"><span><em>de Košice.</em></span></span>
+      </h1>
+      <p class="lead hero-fade" style="--d:.45s">Cap EuroMed accompagne les étudiants français dans leur admission à l'UVLF de Košice, la seule université vétérinaire de Slovaquie&nbsp;: 6 ans de médecine vétérinaire, entièrement en anglais.</p>
+      <div class="hero-ctas hero-fade" style="--d:.6s">
+        <a class="btn btn-ink" data-cta="hero" data-magnetic href="{{ wa_short }}" target="_blank" rel="noopener"><svg class="ic wa-ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>Parler à un conseiller</a>
+        <a class="btn btn-ghost" href="#accompagnement">Comment ça marche<svg class="ic go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <p class="scribble" aria-hidden="true"><svg viewBox="0 0 46 40"><path d="M40 36C30 34 16 28 9 9m0 0-4 9m4-9 8 6"/></svg>Premier échange 100&nbsp;% gratuit</p>
+    </div>
+
+    <div class="collage-frame">
+      <div class="collage" id="collage">
+        <div class="piece pc-cath" style="--depth:.55">
+          <figure class="piece-in polaroid" style="--tilt:-6deg;--i:0;--avg:#8998a8">
+            <span class="tape" style="left:38%;top:-13px;rotate:-4deg" aria-hidden="true"></span>
+            <img src="/assets/img/kosice-cathedrale-sainte-elisabeth-400.webp" srcset="/assets/img/kosice-cathedrale-sainte-elisabeth-400.webp 400w, /assets/img/kosice-cathedrale-sainte-elisabeth-640.webp 640w, /assets/img/kosice-cathedrale-sainte-elisabeth-960.webp 960w" sizes="(max-width:640px) 210px, 310px" width="960" height="728" alt="La cathédrale Sainte-Élisabeth, au cœur du centre historique de Košice" fetchpriority="high" decoding="async">
+            <figcaption>Košice, ta future ville</figcaption>
+          </figure>
+        </div>
+        <div class="piece pc-coat" style="--depth:1.1">
+          <figure class="piece-in polaroid" style="--tilt:6deg;--i:1;--avg:#615748">
+            <span class="tape mint" style="left:30%;top:-12px;rotate:5deg" aria-hidden="true"></span>
+            <img src="/assets/img/taureau-campus-uvlf-360.webp" srcset="/assets/img/taureau-campus-uvlf-360.webp 360w, /assets/img/taureau-campus-uvlf-720.webp 720w" sizes="(max-width:640px) 130px, 192px" width="720" height="900" alt="Sculpture d'une tête de taureau sur le campus de l'UVLF" decoding="async">
+            <figcaption>Sur le campus de l'UVLF</figcaption>
+          </figure>
+        </div>
+        <div class="piece pc-heart" style="--depth:1.7" aria-hidden="true">
+          <div class="piece-in sticker" style="--i:4;--avg:#735f54">
+            <svg class="ring" viewBox="0 0 150 150"><defs><path id="ring-path" d="M75 75m-60 0a60 60 0 1 1 120 0a60 60 0 1 1-120 0"/></defs><text><textPath href="#ring-path" textLength="372" lengthAdjust="spacing">VÉTÉRINAIRE · EN ANGLAIS · KOŠICE · UVLF ·</textPath></text></svg>
+            <img src="/assets/img/modele-anatomique-coeur-200.webp" srcset="/assets/img/modele-anatomique-coeur-200.webp 200w, /assets/img/modele-anatomique-coeur-360.webp 360w" sizes="96px" width="360" height="360" alt="" decoding="async">
+          </div>
+        </div>
+        <div class="piece pc-ticket" style="--depth:.85" aria-hidden="true">
+          <div class="piece-in ticket" style="--tilt:-3deg;--i:2">
+            <div class="t-main">
+              <div class="t-top"><span>Carte d'embarquement</span><b>Cap EuroMed</b></div>
+              <div class="t-route">
+                <div><strong>PAR</strong><small>Paris</small></div>
+                <span class="t-mid"><svg class="ic"><use href="#i-plane"/></svg></span>
+                <div><strong>KSC</strong><small>Košice</small></div>
+              </div>
+              <div class="t-meta"><span><small>Passager</small>Futur(e) véto</span><span><small>Rentrée</small>Septembre</span><span><small>Porte</small>UVLF</span></div>
+            </div>
+            <div class="t-stub"><span class="barcode"></span></div>
+          </div>
+        </div>
+        <div class="piece pc-note" style="--depth:1.3">
+          <div class="piece-in note" style="--tilt:4deg;--i:3">
+            <strong>Pas de concours français.</strong>
+            <span>Admission sur dossier + test d'entrée.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" data-reveal>
+      <div class="stat"><p class="stat-num"><span data-count="6">6</span> ans</p><p class="stat-label">Programme vétérinaire complet</p></div>
+      <div class="stat"><p class="stat-num"><span data-count="0" data-from="9">0</span></p><p class="stat-label">Concours français à passer</p></div>
+      <div class="stat"><p class="stat-num"><span data-count="100">100</span>&nbsp;%</p><p class="stat-label">Cours en anglais à l'UVLF</p></div>
+      <div class="stat"><p class="stat-num">UE</p><p class="stat-label">Diplôme reconnu en Europe</p></div>
+    </div>
+  </div>
+
+  <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
+</section>
+
+<!-- Bande défilante -->
+<div class="tape-wrap" aria-hidden="true"><div class="tape-strip">
+  <div class="tape-track">
+    <span>Médecine vétérinaire</span><i></i><span>100&nbsp;% en anglais</span><i></i><span>Košice, Slovaquie</span><i></i><span>Sans concours français</span><i></i><span>Diplôme reconnu dans l'UE</span><i></i>
+    <span>Médecine vétérinaire</span><i></i><span>100&nbsp;% en anglais</span><i></i><span>Košice, Slovaquie</span><i></i><span>Sans concours français</span><i></i><span>Diplôme reconnu dans l'UE</span><i></i>
+  </div>
+</div></div>
+
+<nav class="onpage" aria-label="Sur cette page">
+  <div class="wrap"><span>Sur cette page :</span><a href="#pourquoi">Pourquoi la Slovaquie</a><a href="#accompagnement">Accompagnement</a><a href="#universite">L'université</a><a href="#tarifs">Tarifs</a><a href="#budget">Budget</a><a href="#equipe">Sur place</a><a href="#faq">FAQ</a></div>
+</nav>
+
+<!-- ===================== POURQUOI ===================== -->
+<section class="section why" id="pourquoi" aria-labelledby="why-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <span class="tag" style="--dot:var(--mint)">Pourquoi choisir cette voie&#8239;?</span>
+      <h2 class="h2" id="why-title">Devenir vétérinaire en Slovaquie,<br class="d-br"> <em>une alternative sérieuse.</em></h2>
+    </header>
+
+    <div class="bento">
+      <article class="card" data-reveal style="--tone:var(--mint);--tilt:-1deg">
+        <span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-graduation-cap"/></svg></span>
+        <h3>Diplôme reconnu dans toute l'Union européenne</h3>
+        <p>Ton diplôme de vétérinaire de l'UVLF est reconnu automatiquement en France et dans toute l'UE (directive 2005/36/CE). Pour exercer en France, tu t'inscris ensuite à l'Ordre des vétérinaires.</p>
+      </article>
+      <article class="card" data-reveal style="--tone:var(--marigold);--tilt:1deg;--d:.08s">
+        <span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-ticket-x"/></svg></span>
+        <h3>Pas de concours français</h3>
+        <p>Pas de concours des écoles vétérinaires françaises. L'admission se fait sur dossier et sur un test écrit de biologie et de chimie, en anglais.</p>
+      </article>
+      <figure class="b-photo" data-reveal data-scroll style="--avg:#778184;--d:.16s">
+        <img src="/assets/img/kosice-centre-historique-800.webp" srcset="/assets/img/kosice-centre-historique-480.webp 480w, /assets/img/kosice-centre-historique-800.webp 800w, /assets/img/kosice-centre-historique-1200.webp 1200w" sizes="(min-width:1040px) 780px, (min-width:760px) 92vw, 430px" width="1200" height="899" alt="Vue sur la cathédrale Sainte-Élisabeth depuis le centre historique de Košice" loading="lazy" decoding="async">
+        <figcaption><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg>Košice — cathédrale Sainte-Élisabeth, centre historique</figcaption>
+      </figure>
+      <article class="card" data-reveal style="--tone:var(--peri);--tilt:.8deg">
+        <span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-languages"/></svg></span>
+        <h3>Enseignement en anglais</h3>
+        <p>Tout le programme vétérinaire est enseigné en anglais. Un atout pour ton CV et ta carrière internationale, en plus d'un diplôme européen.</p>
+      </article>
+      <article class="card" data-reveal style="--tone:var(--sky);--tilt:-.8deg;--d:.08s">
+        <span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-piggy-bank"/></svg></span>
+        <h3>Coût de vie abordable</h3>
+        <p>Košice est l'une des villes les moins chères d'Europe. Logement, nourriture, transports — ton budget reste maîtrisé comparé à Paris ou Lyon.</p>
+      </article>
+      <article class="card b-wide" data-reveal style="--tone:var(--blush);--tilt:0deg">
+        <span class="ico"><svg class="ic" aria-hidden="true"><use href="#i-paw-print"/></svg></span>
+        <div>
+          <h3>Médecine vétérinaire</h3>
+          <p>L'UVLF est la seule université de Slovaquie qui forme des vétérinaires. Son programme en anglais dure 6 ans et est reconnu au niveau européen.</p>
+        </div>
+        <div class="pills"><span class="pill"><svg class="ic" aria-hidden="true"><use href="#i-paw-print"/></svg>Vétérinaire · 6 ans</span><span class="pill"><svg class="ic" aria-hidden="true"><use href="#i-languages"/></svg>100&nbsp;% en anglais</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACCOMPAGNEMENT ===================== -->
+<section class="section process" id="accompagnement" aria-labelledby="process-title">
+  <div class="wrap">
+    <header class="sec-head center" data-reveal>
+      <span class="tag" style="--dot:var(--peri)">Notre accompagnement</span>
+      <h2 class="h2" id="process-title">De ton projet<br class="d-br"> <em>à ton admission.</em></h2>
+      <p class="lead">Cap EuroMed t'accompagne à chaque étape, du premier contact jusqu'à ton installation à Košice.</p>
+    </header>
+
+    <div class="route" id="route">
+      <div class="route-line" aria-hidden="true"><span class="route-fill"></span><span class="route-plane"><svg class="ic"><use href="#i-plane"/></svg></span></div>
+      <ol class="steps">
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="step-card" style="--tone:var(--mint);--tilt:-1.2deg">
+            <svg class="ic" aria-hidden="true"><use href="#i-message-circle"/></svg>
+            <h3><span class="sr-only">Étape 1 : </span>Consultation gratuite sur WhatsApp</h3>
+            <p>Tu nous contactes, on évalue ton profil, ton niveau scolaire et tes motivations. On répond à toutes tes questions honnêtement.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="step-card" style="--tone:var(--marigold);--tilt:1.2deg">
+            <svg class="ic" aria-hidden="true"><use href="#i-folder-open"/></svg>
+            <h3><span class="sr-only">Étape 2 : </span>Préparation du dossier d'admission</h3>
+            <p>On t'aide à constituer un dossier solide : relevés de notes, lettre de motivation, traductions, et tout ce qu'exige l'UVLF.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="step-card" style="--tone:var(--peri);--tilt:-.8deg">
+            <svg class="ic" aria-hidden="true"><use href="#i-notebook-pen"/></svg>
+            <h3><span class="sr-only">Étape 3 : </span>Préparation au test d'entrée</h3>
+            <p>L'UVLF fait passer un test écrit de biologie et de chimie, en anglais. On te prépare avec des ressources ciblées et des conseils pratiques.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">04</span>
+          <div class="step-card" style="--tone:var(--sky);--tilt:1deg">
+            <svg class="ic" aria-hidden="true"><use href="#i-key-round"/></svg>
+            <h3><span class="sr-only">Étape 4 : </span>Installation &amp; vie à Košice</h3>
+            <p>Logement, ouverture de compte bancaire, enregistrement de ton séjour, assurance santé — on t'aide à t'installer sereinement dans ta nouvelle ville.</p>
+          </div>
+        </li>
+        <li class="step" data-reveal>
+          <span class="step-num" aria-hidden="true">05</span>
+          <div class="step-card" style="--tone:var(--blush);--tilt:-1deg">
+            <svg class="ic" aria-hidden="true"><use href="#i-heart-handshake"/></svg>
+            <h3><span class="sr-only">Étape 5 : </span>Suivi pendant tes études</h3>
+            <p>On reste disponibles après ton admission : conseils, contacts avec des étudiants de l'UVLF, soutien continu.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== UNIVERSITÉ ===================== -->
+<section class="section uni" id="universite" aria-labelledby="uni-title">
+  <div class="wrap uni-grid">
+    <div class="uni-photos" data-reveal>
+      <figure class="polaroid pa" style="--tilt:-4deg;--avg:#7d7465">
+        <span class="tape peri" style="left:12%;top:-12px;rotate:-8deg" aria-hidden="true"></span>
+        <img src="/assets/img/universite-veterinaire-uvlf-kosice-480.webp" srcset="/assets/img/universite-veterinaire-uvlf-kosice-480.webp 480w, /assets/img/universite-veterinaire-uvlf-kosice-960.webp 960w" sizes="(min-width:960px) 370px, 70vw" width="960" height="720" alt="Un bâtiment historique du campus de l'UVLF, à Košice" loading="lazy" decoding="async">
+        <figcaption>Le campus de l'UVLF</figcaption>
+      </figure>
+      <figure class="polaroid pb" style="--tilt:5deg;--avg:#8d8c92">
+        <span class="tape" style="right:10%;top:-12px;rotate:6deg" aria-hidden="true"></span>
+        <img src="/assets/img/entree-uvlf-kosice-480.webp" srcset="/assets/img/entree-uvlf-kosice-480.webp 480w, /assets/img/entree-uvlf-kosice-960.webp 960w" sizes="(min-width:960px) 310px, 58vw" width="960" height="720" alt="L'entrée du campus de l'UVLF, rue Komenského à Košice" loading="lazy" decoding="async">
+        <figcaption>L'entrée de l'UVLF</figcaption>
+      </figure>
+      <span class="stamp" aria-hidden="true"><span>UVLF<b>1949</b>Košice</span></span>
+    </div>
+    <div class="uni-copy" data-reveal style="--d:.1s">
+      <span class="tag" style="--dot:var(--marigold)">Ta future université</span>
+      <h2 class="h2" id="uni-title" style="margin-top:18px">UVLF Košice —<br class="d-br"> <em>l'école vétérinaire de Slovaquie.</em></h2>
+      <p class="lead">L'Université de médecine vétérinaire et de pharmacie de Košice (UVLF) est une université publique slovaque fondée en 1949. C'est la seule université du pays qui forme des vétérinaires, et elle accueille des étudiants internationaux dans son programme en anglais.</p>
+      <div class="note fr-note"><p><span class="flag-fr" aria-hidden="true"></span>Notre équipe vit à Košice et est en contact avec des étudiants de l'UVLF&nbsp;: tu ne pars pas dans l'inconnu.</p></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <ul class="facts">
+      <li class="fact" data-reveal><svg class="ic" aria-hidden="true"><use href="#i-landmark"/></svg><strong>Fondée en 1949</strong><span>Université publique slovaque</span></li>
+      <li class="fact" data-reveal style="--d:.06s"><svg class="ic" aria-hidden="true"><use href="#i-badge-check"/></svg><strong>Reconnu dans toute l'UE</strong><span>Directive européenne 2005/36/CE</span></li>
+      <li class="fact" data-reveal style="--d:.12s"><svg class="ic" aria-hidden="true"><use href="#i-paw-print"/></svg><strong>Hôpital vétérinaire</strong><span>Sur le campus de l'université</span></li>
+      <li class="fact" data-reveal style="--d:.18s"><svg class="ic" aria-hidden="true"><use href="#i-map-pin"/></svg><strong>Košice, Slovaquie</strong><span>2e plus grande ville, dynamique &amp; étudiante</span></li>
+      <li class="fact" data-reveal style="--d:.24s"><svg class="ic" aria-hidden="true"><use href="#i-plane"/></svg><strong>Accessible depuis Paris</strong><span>En avion via Vienne ou Budapest</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== TARIFS ===================== -->
+<section class="section pricing" id="tarifs" aria-labelledby="price-title">
+  <div class="wrap">
+    <header class="sec-head center" data-reveal>
+      <span class="tag" style="--dot:var(--papaya)">Tarifs &amp; Budget</span>
+      <h2 class="h2" id="price-title">Combien ça coûte<br class="d-br"> <em>vraiment&#8239;?</em></h2>
+      <p class="lead">Des frais de scolarité clairs, sans mauvaises surprises, dans une université publique.</p>
+    </header>
+
+    <div class="plans single">
+      <article class="plan" data-reveal data-tilt style="--tone:var(--mint)">
+        <figure class="polaroid plan-photo" aria-hidden="true"><img src="/assets/img/taureau-campus-uvlf-carre-240.webp" srcset="/assets/img/taureau-campus-uvlf-carre-240.webp 240w, /assets/img/taureau-campus-uvlf-carre-480.webp 480w" sizes="92px" width="480" height="480" alt="" loading="lazy" decoding="async"><span></span></figure>
+        <span class="plan-tag"><svg class="ic" aria-hidden="true"><use href="#i-paw-print"/></svg>Médecine vétérinaire</span>
+        <h3>Vétérinaire</h3>
+        <p class="price"><span data-count="10000" data-from="7000">10&#8239;000</span><small>€</small></p>
+        <p class="per">par année scolaire · 6 ans de formation</p>
+        <ul class="checks">
+          <li>Programme complet en anglais</li>
+          <li>Hôpital vétérinaire universitaire sur le campus</li>
+          <li>Acompte de 800&nbsp;€ à l'admission, déduit de la 1re année</li>
+          <li>Diplôme reconnu dans toute l'UE</li>
+        </ul>
+      </article>
+    </div>
+    <p class="fee-note">Tarif annoncé par l'UVLF pour les étudiants qui commencent en 2026/2027. Les frais sont fixés chaque année par l'université : on te confirme le montant exact pour ta rentrée.</p>
+  </div>
+</section>
+
+<!-- ===================== BUDGET ===================== -->
+<section class="section budget" id="budget" aria-labelledby="budget-title">
+  <div class="wrap budget-grid">
+    <div class="budget-copy" data-reveal>
+      <span class="tag" style="--dot:var(--sky)">Coût de la vie à Košice</span>
+      <h2 class="h2" id="budget-title" style="margin-top:18px">Vivre à Košice,<br class="d-br"> <em>c'est abordable.</em></h2>
+      <p class="lead">Košice est la 2e ville de Slovaquie — dynamique, étudiante, et bien moins chère que Paris. Voici un budget mensuel réaliste.</p>
+      <div class="vs">
+        <span class="vs-badge" aria-hidden="true">vs</span>
+        <p><strong>1&nbsp;500 – 2&nbsp;500&nbsp;€/mois à Paris</strong>pour le même niveau de vie.</p>
+      </div>
+      <figure class="polaroid budget-photo" style="--avg:#a2abaf">
+        <span class="tape blush" style="left:34%;top:-12px;rotate:-3deg" aria-hidden="true"></span>
+        <img src="/assets/img/kosice-rue-hlavna-360.webp" srcset="/assets/img/kosice-rue-hlavna-360.webp 360w, /assets/img/kosice-rue-hlavna-720.webp 720w" sizes="230px" width="720" height="900" alt="La rue Hlavná, grande rue piétonne de Košice, et ses terrasses" loading="lazy" decoding="async">
+        <figcaption>Hlavná, la grande rue piétonne</figcaption>
+      </figure>
+    </div>
+
+    <div class="receipt-zone">
+      <div class="printer" aria-hidden="true"></div>
+      <div class="receipt-clip no-fade" data-reveal>
+        <div class="receipt">
+          <div class="r-head"><strong>BUDGET ÉTUDIANT</strong><span>Košice · Slovaquie</span><span>Estimation mensuelle</span></div>
+          <div class="r-sep"></div>
+          <ul class="r-lines">
+            <li><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg><span class="r-name">Loyer mensuel</span><span class="r-amt">400–600&nbsp;€</span><small>400&nbsp;€ en coloc · 600&nbsp;€ seul</small></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-shopping-basket"/></svg><span class="r-name">Alimentation</span><span class="r-amt">150–200&nbsp;€</span><small>courses + restos</small></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-bus"/></svg><span class="r-name">Transports</span><span class="r-amt">15&nbsp;€</span><small>pass mensuel étudiant</small></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-smartphone"/></svg><span class="r-name">Forfait téléphone</span><span class="r-amt">15–25&nbsp;€</span><small>forfait local</small></li>
+            <li><svg class="ic" aria-hidden="true"><use href="#i-party-popper"/></svg><span class="r-name">Loisirs &amp; sport</span><span class="r-amt">~50&nbsp;€</span><small>sorties, salle, activités</small></li>
+          </ul>
+          <div class="r-sep"></div>
+          <div class="r-total"><span>TOTAL / MOIS</span><strong>630 – 890&nbsp;€</strong></div>
+          <p class="r-foot">Budget mensuel total estimé<br>Merci et bienvenue à Košice&#8239;!</p>
+          <div class="barcode" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SUR PLACE ===================== -->
+<section class="section team" id="equipe" aria-labelledby="team-title">
+  <div class="wrap team-grid">
+    <div class="team-copy" data-reveal>
+      <span class="tag" style="--dot:var(--mint)">Sur place, à Košice</span>
+      <h2 class="h2" id="team-title" style="margin-top:18px">Tu ne pars pas <em>dans l'inconnu.</em></h2>
+      <p class="lead">Notre équipe vit à Košice et est en contact avec des étudiants de l'UVLF. Avant et après ton arrivée, tu as des réponses concrètes.</p>
+      <ul class="perks">
+        <li><span class="ico" style="--tone:var(--mint)"><svg class="ic" aria-hidden="true"><use href="#i-paw-print"/></svg></span>Des étudiants de l'UVLF pour te parler de la fac, des cours et des examens.</li>
+        <li><span class="ico" style="--tone:var(--marigold)"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg></span>Aide pour trouver un logement avant ton arrivée, avec des contacts de confiance déjà vérifiés.</li>
+        <li><span class="ico" style="--tone:var(--peri)"><svg class="ic" aria-hidden="true"><use href="#i-handshake"/></svg></span>Un accueil à ton arrivée — quelqu'un parle français, connaît la ville et peut répondre à tes questions concrètes.</li>
+        <li><span class="ico" style="--tone:var(--sky)"><svg class="ic" aria-hidden="true"><use href="#i-messages-square"/></svg></span>Un groupe WhatsApp d'étudiants français à Košice, pour ne jamais te sentir seul(e).</li>
+      </ul>
+    </div>
+    <div class="badges" data-reveal style="--d:.1s">
+      <article class="badge" style="--tone:var(--mint);--tilt:-3deg">
+        <span class="badge-clip" aria-hidden="true"></span>
+        <span class="badge-av" aria-hidden="true"><svg class="ic"><use href="#i-paw-print"/></svg></span>
+        <h3>Étudiants de l'UVLF</h3><p>En contact avec notre équipe</p><span class="role">Infos sur la fac &amp; les examens</span>
+      </article>
+      <article class="badge" style="--tone:var(--marigold);--tilt:2.5deg">
+        <span class="badge-clip" aria-hidden="true"></span>
+        <span class="badge-av" aria-hidden="true"><svg class="ic"><use href="#i-house"/></svg></span>
+        <h3>Équipe Cap EuroMed</h3><p>Étudiants à Košice</p><span class="role">Logement &amp; installation</span>
+      </article>
+      <article class="badge" style="--tone:var(--peri);--tilt:2deg">
+        <span class="badge-clip" aria-hidden="true"></span>
+        <span class="badge-av" aria-hidden="true"><svg class="ic"><use href="#i-messages-square"/></svg></span>
+        <h3>Réseau français</h3><p>Sur place à Košice</p><span class="role">Vie étudiante &amp; entraide</span>
+      </article>
+      <article class="badge more" style="--tone:var(--sky);--tilt:-2deg">
+        <span class="badge-av" aria-hidden="true">+</span>
+        <h3>Toute l'équipe</h3><p><a href="/equipe/">Découvre l'équipe</a></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BANDE PHOTOS ===================== -->
+<section class="band" aria-label="Košice et l'UVLF en images">
+  <div class="wrap band-grid">
+    <figure class="band-item" data-reveal>
+      <div class="band-img" data-scroll style="--avg:#5d5d55">
+        <img src="/assets/img/kosice-vue-aerienne-theatre-800.webp" srcset="/assets/img/kosice-vue-aerienne-theatre-800.webp 800w, /assets/img/kosice-vue-aerienne-theatre-1400.webp 1400w, /assets/img/kosice-vue-aerienne-theatre-1920.webp 1920w" sizes="(min-width:900px) 58vw, 100vw" width="1920" height="1080" alt="Vue aérienne du centre historique de Košice et du Théâtre national" loading="lazy" decoding="async">
+      </div>
+      <figcaption class="band-cap torn-y"><strong>Košice, ta nouvelle ville</strong><span>2e plus grande ville de Slovaquie — dynamique, sûre et étudiante</span></figcaption>
+    </figure>
+    <figure class="band-item sq" data-reveal style="--d:.12s">
+      <div class="band-img" data-scroll style="--avg:#979696">
+        <img src="/assets/img/hopital-veterinaire-uvlf-kosice-800.webp" srcset="/assets/img/hopital-veterinaire-uvlf-kosice-800.webp 800w, /assets/img/hopital-veterinaire-uvlf-kosice-1400.webp 1400w" sizes="(min-width:900px) 42vw, 100vw" width="1400" height="788" alt="L'hôpital vétérinaire universitaire, sur le campus de l'UVLF à Košice" loading="lazy" decoding="async">
+      </div>
+      <figcaption class="band-cap torn-y"><strong>L'hôpital vétérinaire universitaire</strong><span>Sur le campus de l'UVLF, à Košice</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <header class="sec-head" data-reveal>
+      <span class="tag" style="--dot:var(--peri)">Questions fréquentes</span>
+      <h2 class="h2" id="faq-title">Tout ce que tu <em>te demandes.</em></h2>
+      <p class="lead">Une autre question&#8239;? Écris-nous sur WhatsApp, on te répond honnêtement.</p>
+    </header>
+    <div class="faq-list" data-reveal style="--d:.1s">
+      {%- for f in page.faq %}
+      <details>
+        <summary>{{ f.q }}<span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>{{ f.a }}</p></div>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta-contact.html %}

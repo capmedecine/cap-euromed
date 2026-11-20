@@ -8,8 +8,11 @@
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const $ = (sel) => d.querySelector(sel), $$ = (sel) => [...d.querySelectorAll(sel)];
 
-  /* Anciennes ancres de l'accueil (/#equipe, /#faq) : redirection vers leurs pages */
-  const moved = { '/': { equipe: '/equipe/', faq: '/faq/' }, '/en/': { equipe: '/en/team/', faq: '/en/faq/' } }[location.pathname];
+  /* Anciennes ancres de l'accueil (/#equipe, /#faq, /#accompagnement) : redirection vers leurs pages */
+  const moved = {
+    '/': { equipe: '/equipe/', faq: '/faq/', accompagnement: '/accompagnement/' },
+    '/en/': { equipe: '/en/team/', faq: '/en/faq/', accompagnement: '/en/support/' },
+  }[location.pathname];
   if (moved && moved[location.hash.slice(1)]) { location.replace(moved[location.hash.slice(1)]); return; }
 
   requestAnimationFrame(() => requestAnimationFrame(() => html.classList.add('ready')));
@@ -107,6 +110,17 @@
     $$('.nav-links a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
     d.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
+
+  /* Sous-menu « Universités » : clic, clavier, fermeture en cliquant ailleurs */
+  $$('.nav-drop').forEach((btn) => {
+    const group = btn.parentElement;
+    const isOpen = () => btn.getAttribute('aria-expanded') === 'true';
+    const set = (open) => btn.setAttribute('aria-expanded', String(open));
+    btn.addEventListener('click', () => set(!isOpen()));
+    group.addEventListener('focusout', (e) => { if (!group.contains(e.relatedTarget)) set(false); });
+    group.addEventListener('keydown', (e) => { if (e.key === 'Escape' && isOpen()) { e.stopPropagation(); set(false); btn.focus(); } });
+    d.addEventListener('click', (e) => { if (isOpen() && !group.contains(e.target)) set(false); });
+  });
 
   /* Lien actif dans la navigation (ancres de la page courante, ex. /#destinations sur l'accueil) */
   const links = new Map($$('.nav-links a').filter((a) => a.hash && a.pathname === location.pathname).map((a) => [a.hash.slice(1), a]));

@@ -677,3 +677,46 @@ html[lang="en"] .price{gap:1px}
 .g-meta a{color:inherit;text-underline-offset:3px}
 .faq-page>h2:first-child{margin-top:0}
 .faq-more{margin-top:8px;font-size:16px;color:var(--graphite)}
+
+/* ==========================================================================
+   Menu déroulant « Universités »
+   ========================================================================== */
+.nav-group{display:flex;flex-direction:column}
+.nav-drop{position:relative;display:flex;align-items:center;justify-content:space-between;gap:6px;width:100%;padding:14px 16px;border:0;border-radius:999px;background:none;font:500 17px/1.2 var(--sans);color:var(--ink);text-align:left;cursor:pointer}
+.nav-drop .ic{width:18px;height:18px;flex:none;transition:rotate .35s var(--ease)}
+.nav-drop[aria-expanded="true"] .ic{rotate:180deg}
+.nav-sub{display:none;flex-direction:column;gap:2px;padding:0 0 6px 12px}
+.nav-drop[aria-expanded="true"]+.nav-sub{display:flex}
+.nav .nav-links .nav-sub a{display:flex;flex-direction:column;gap:2px;padding:10px 16px;border-radius:14px;font-size:16px}
+.nav .nav-links .nav-sub a::after{display:none}
+.nav-sub-name{font-weight:500}
+.nav-sub-note{font-size:13px;font-weight:400;color:var(--graphite)}
+.nav .nav-links .nav-sub a:hover,.nav .nav-links .nav-sub a[aria-current="page"]{background:var(--linen)}
+@media (min-width:1100px){
+  .nav-group{position:relative;flex-direction:row;align-items:center}
+  .nav-drop{width:auto;padding:9px 12px;font-size:15px;gap:4px}
+  .nav-drop .ic{width:15px;height:15px}
+  .nav-drop::after{content:"";position:absolute;left:12px;right:31px;bottom:5px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+  .nav-group.is-current .nav-drop::after{transform:scaleX(1)}
+  .nav-sub{display:flex;position:absolute;top:calc(100% + 10px);left:0;z-index:5;min-width:260px;padding:8px;background:#fff;border-radius:18px;box-shadow:var(--sh-md);opacity:0;visibility:hidden;translate:0 -6px;transition:opacity .2s,translate .3s var(--ease),visibility 0s .3s}
+  .nav-sub::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+  .nav-drop[aria-expanded="true"]+.nav-sub{opacity:1;visibility:visible;translate:0 0;transition:opacity .2s,translate .3s var(--ease),visibility 0s}
+  .nav .nav-links .nav-sub a{padding:10px 14px;font-size:15px}
+}
+@media (min-width:1100px) and (hover:hover){
+  .nav-group:hover .nav-sub{opacity:1;visibility:visible;translate:0 0;transition:opacity .2s,translate .3s var(--ease),visibility 0s}
+  .nav-drop:hover::after{transform:scaleX(1);transform-origin:left}
+}
+
+/* Accueil : bloc « Pour aller plus loin » */
+.explore-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.explore-grid .ico{display:grid;place-items:center;width:50px;height:50px;border-radius:15px;background:var(--tone,var(--mint))}
+.explore-grid .ico .ic{width:25px;height:25px}
+.explore-grid .guide-card h3{margin-top:18px}
+.explore-grid .dest-go{margin-top:auto;padding-top:18px}
+
+/* Accroche longue (accueil) et tarif unique (UVLF) */
+.display.long{font-size:clamp(2.1rem,8.4vw,3.65rem)}
+@media (min-width:1000px) and (max-width:1279px){.display.long{font-size:3.05rem}}
+.plans.single{max-width:560px}
+@media (min-width:820px){.plans.single{grid-template-columns:1fr}}

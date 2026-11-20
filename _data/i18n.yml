@@ -8,8 +8,8 @@ fr:
   menu_open: Ouvrir le menu
   menu_close: Fermer le menu
   cta_nav: Nous contacter
-  wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%20%C3%A0%20l%27%C3%A9tranger%20%21"
-  wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%20%C3%A0%20l%27%C3%A9tranger.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F"
+  wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%2C%20dentaire%20ou%20v%C3%A9t%C3%A9rinaire%20%C3%A0%20l%27%C3%A9tranger%20%21"
+  wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%2C%20dentaire%20ou%20v%C3%A9t%C3%A9rinaire%20%C3%A0%20l%27%C3%A9tranger.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F"
   wa_float_label: Nous écrire sur WhatsApp
   # Carte postale « Contact » en bas de page (_includes/cta-contact.html)
   cta_tag: "Prêt à te lancer&#8239;?"
@@ -22,19 +22,23 @@ fr:
     - "Consultation 100&nbsp;% gratuite"
     - "Sans engagement"
   nav:
-    - label: Destinations
-      href: /#destinations
-    - label: UPJŠ Košice
-      href: /universites/upjs-kosice/
+    - label: Universités
+      children:
+        - label: UPJŠ Košice
+          note: Médecine · Dentaire
+          href: /universites/upjs-kosice/
+        - label: UVLF Košice
+          note: Vétérinaire
+          href: /universites/uvlf-kosice/
     - label: Accompagnement
-      href: /#accompagnement
+      href: /accompagnement/
     - label: Équipe
       href: /equipe/
     - label: Guides
       href: /guides/
     - label: FAQ
       href: /faq/
-  footer_about: "Agence d'accompagnement pour les études de médecine et de dentaire en Europe, en anglais."
+  footer_about: "Agence d'accompagnement pour les études de médecine, de dentaire et de vétérinaire en Europe, en anglais."
   footer_wa: "WhatsApp : +33 7 83 11 91 80"
   footer_nav_label: Liens du pied de page
   footer_tagline: "Agence d'accompagnement étudiant"
@@ -51,6 +55,8 @@ fr:
             <a href="https://commons.wikimedia.org/wiki/File:Poslucharen_LF_UPJS.jpg" rel="nofollow">amphithéâtre LF UPJŠ</a> © Jozefgajdos, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" rel="nofollow">CC BY-SA 3.0</a> ·
             <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Hlavn%C3%A1_ulica_-a.jpg" rel="nofollow">rue Hlavná</a> © Ladislav Luppa, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="nofollow">CC BY-SA 4.0</a> ·
             <a href="https://commons.wikimedia.org/wiki/File:Kosice_-_State_Theatre_and_Main_Street.JPG" rel="nofollow">vue aérienne</a> © Maroš Mráz, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.fr" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Komensk%C3%A9ho_73_-b1.jpg" rel="nofollow">campus de l'UVLF</a>, <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Komensk%C3%A9ho_73_-m1.jpg" rel="nofollow">hôpital vétérinaire</a> (plaques floutées) et <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Komensk%C3%A9ho_73_-_plastika_-a.jpg" rel="nofollow">sculpture du campus</a> © Ladislav Luppa, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:UVLF_Ko%C5%A1ice.jpg" rel="nofollow">entrée de l'UVLF</a> © V0lkanic, <a href="https://creativecommons.org/licenses/by/4.0/deed.fr" rel="nofollow">CC BY 4.0</a> ·
             <a href="https://commons.wikimedia.org/wiki/File:National_Theatre_and_Singing_Fountain,_Kosice.jpg" rel="nofollow">Théâtre national</a> Ladislav Luppa, CC0.
             Photos médicales : <a href="https://unsplash.com/license" rel="nofollow">Unsplash</a>.
 en:
@@ -62,8 +68,8 @@ en:
   menu_open: Open menu
   menu_close: Close menu
   cta_nav: Contact us
-  wa_short: "https://wa.me/33783119180?text=Hello%2C%20I%27m%20interested%20in%20studying%20medicine%20abroad%21"
-  wa_long: "https://wa.me/33783119180?text=Hello%20Cap%20EuroMed%20%F0%9F%91%8B%20I%27m%20interested%20in%20studying%20medicine%20abroad.%20Could%20you%20tell%20me%20more%3F"
+  wa_short: "https://wa.me/33783119180?text=Hello%2C%20I%27m%20interested%20in%20studying%20medicine%2C%20dentistry%20or%20veterinary%20medicine%20abroad%21"
+  wa_long: "https://wa.me/33783119180?text=Hello%20Cap%20EuroMed%20%F0%9F%91%8B%20I%27m%20interested%20in%20studying%20medicine%2C%20dentistry%20or%20veterinary%20medicine%20abroad.%20Could%20you%20tell%20me%20more%3F"
   wa_float_label: Message us on WhatsApp
   cta_tag: "Ready to take the leap?"
   cta_title_html: "Ask us anything, <em>it's free.</em>"
@@ -75,17 +81,21 @@ en:
     - "100% free consultation"
     - "No commitment"
   nav:
-    - label: Destinations
-      href: /en/#destinations
-    - label: UPJŠ Košice
-      href: /en/universities/upjs-kosice/
+    - label: Universities
+      children:
+        - label: UPJŠ Košice
+          note: Medicine · Dentistry
+          href: /en/universities/upjs-kosice/
+        - label: UVLF Košice
+          note: Veterinary medicine
+          href: /en/universities/uvlf-kosice/
     - label: Our support
-      href: /en/#accompagnement
+      href: /en/support/
     - label: Team
       href: /en/team/
     - label: FAQ
       href: /en/faq/
-  footer_about: "Support agency for studying medicine and dentistry in Europe, in English."
+  footer_about: "Support agency for studying medicine, dentistry and veterinary medicine in Europe, in English."
   footer_wa: "WhatsApp: +33 7 83 11 91 80"
   footer_nav_label: Footer links
   footer_tagline: "Student support agency"
@@ -102,5 +112,7 @@ en:
             <a href="https://commons.wikimedia.org/wiki/File:Poslucharen_LF_UPJS.jpg" rel="nofollow">UPJŠ lecture hall</a> © Jozefgajdos, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" rel="nofollow">CC BY-SA 3.0</a> ·
             <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Hlavn%C3%A1_ulica_-a.jpg" rel="nofollow">Hlavná street</a> © Ladislav Luppa, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" rel="nofollow">CC BY-SA 4.0</a> ·
             <a href="https://commons.wikimedia.org/wiki/File:Kosice_-_State_Theatre_and_Main_Street.JPG" rel="nofollow">aerial view</a> © Maroš Mráz, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" rel="nofollow">CC BY-SA 3.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Komensk%C3%A9ho_73_-b1.jpg" rel="nofollow">UVLF campus</a>, <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Komensk%C3%A9ho_73_-m1.jpg" rel="nofollow">veterinary hospital</a> (number plates blurred) and <a href="https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Komensk%C3%A9ho_73_-_plastika_-a.jpg" rel="nofollow">campus sculpture</a> © Ladislav Luppa, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" rel="nofollow">CC BY-SA 4.0</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:UVLF_Ko%C5%A1ice.jpg" rel="nofollow">UVLF entrance</a> © V0lkanic, <a href="https://creativecommons.org/licenses/by/4.0/deed.en" rel="nofollow">CC BY 4.0</a> ·
             <a href="https://commons.wikimedia.org/wiki/File:National_Theatre_and_Singing_Fountain,_Kosice.jpg" rel="nofollow">National Theatre</a> Ladislav Luppa, CC0.
             Medical photos: <a href="https://unsplash.com/license" rel="nofollow">Unsplash</a>.

@@ -10,13 +10,23 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 - `_data/i18n.yml` : textes d'interface FR/EN (menu, pied de page, liens WhatsApp, bloc contact `cta_*`, crédits photos).
 - `_data/universites.yml` : cartes « Nos destinations » de la page d'accueil.
 - `_data/faq.yml` : questions/réponses de la page FAQ (FR et EN, mêmes groupes `id`). Les données structurées FAQPage en sont générées.
-- Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN),
-  `equipe/index.html` ↔ `en/team/index.html` (équipe), `faq/index.html` ↔ `en/faq/index.html` (FAQ), `404.html`, `sitemap.xml` (généré).
-  L'équipe et la FAQ ne sont plus sur l'accueil ; les anciennes ancres `/#equipe` et `/#faq` sont redirigées par `site.js`.
+- Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN)
+  — aujourd'hui `upjs-kosice` (médecine, dentaire) et `uvlf-kosice` (vétérinaire) —,
+  `accompagnement/index.html` ↔ `en/support/index.html` (parcours en 5 étapes), `equipe/index.html` ↔ `en/team/index.html` (équipe),
+  `faq/index.html` ↔ `en/faq/index.html` (FAQ), `404.html`, `sitemap.xml` (généré).
+  L'accompagnement, l'équipe et la FAQ ne sont plus sur l'accueil ; les anciennes ancres `/#accompagnement`, `/#equipe` et `/#faq`
+  sont redirigées par `site.js`. Les pages d'université gardent leur propre section « Accompagnement » (pages d'arrivée des pubs).
+- Menu : `nav` dans `_data/i18n.yml`. Une entrée avec `children` (label, note, href) devient un menu déroulant (« Universités »).
+- Vocabulaire : parler de « concours français » (PASS, LAS, concours véto), jamais de « numerus clausus ». Ne pas écrire
+  « sans concours » tout court : les facs ont leur propre test d'entrée.
 - `assets/css/site.css`, `assets/js/site.js` : styles et interactions communs. Après modification, incrémenter `asset_version` dans `_config.yml`.
 - `_guides/` : collection d'articles (FR uniquement), publiés sous `/guides/<nom>/` avec le layout `_layouts/guide.html`
   (sommaire, FAQ, sources, données structurées Article). Index : `guides/index.html`.
 - `_brouillons/` : non publié (Jekyll ignore les dossiers en `_`). Contient la page mentions légales en attente des infos de l'éditeur.
+
+## Notes de travail (non publiées)
+- `.claude/notes/plan-reseaux-sociaux.md` : plan réseaux sociaux mis de côté. Le ressortir dès que l'utilisateur parle de
+  création de contenu, de réseaux sociaux, de TikTok/Instagram/YouTube ou de vidéos.
 
 ## Front matter d'une page
 `layout: base`, `lang: fr|en`, `alt_url` (page équivalente dans l'autre langue, sert au bouton FR/EN et aux hreflang),
@@ -27,7 +37,7 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 1. Copier `universites/upjs-kosice/` vers `universites/<slug>/` et `en/universities/upjs-kosice/` vers `en/universities/<slug>/`, puis réécrire le contenu.
 2. Mettre `alt_url` croisés entre les deux pages.
 3. Ajouter un bloc dans `_data/universites.yml` (photo WebP en 480 et 960 px dans `assets/img/`).
-4. Ajouter l'entrée de menu dans `_data/i18n.yml` (ou passer à un menu « Universités » si elles sont nombreuses).
+4. Ajouter l'université dans les `children` du menu « Universités » / « Universities » de `_data/i18n.yml` (FR et EN).
 5. Le sitemap se met à jour tout seul (`sitemap: true`).
 
 ## Tester en local

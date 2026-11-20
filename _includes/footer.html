@@ -9,7 +9,11 @@
     </div>
     <nav class="foot-links" aria-label="{{ t.footer_nav_label }}">
       {%- for item in t.nav %}
+      {%- if item.children %}{% for c in item.children %}
+      <a href="{{ c.href }}">{{ c.label }}</a>
+      {%- endfor %}{% else %}
       <a href="{{ item.href }}">{{ item.label }}</a>
+      {%- endif %}
       {%- endfor %}
       {%- if page.lang == "en" %}
       <a href="{{ page.alt_url | default: '/' }}" lang="fr" hreflang="fr" data-lang-switch>{{ t.other_lang }}</a>

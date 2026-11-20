@@ -22,3 +22,24 @@
     alt: "The UPJŠ Faculty of Medicine in Košice"
     facts: ["Medicine · 6 years", "Dentistry · 5 years", "100% in English", "Entrance exam"]
     cta: "Discover UPJŠ"
+- id: uvlf-kosice
+  image: /assets/img/universite-veterinaire-uvlf-kosice
+  image_w: 960
+  image_h: 720
+  image_avg: "#7d7465"
+  fr:
+    url: /universites/uvlf-kosice/
+    place: "Slovaquie · Košice"
+    name: "Université de médecine vétérinaire et de pharmacie (UVLF)"
+    summary: "La seule université vétérinaire de Slovaquie, avec un programme entièrement en anglais. Notre équipe est en contact avec ses étudiants."
+    alt: "Un bâtiment historique du campus de l'UVLF à Košice"
+    facts: ["Vétérinaire · 6 ans", "100 % en anglais", "Test d'entrée"]
+    cta: "Découvrir l'UVLF"
+  en:
+    url: /en/universities/uvlf-kosice/
+    place: "Slovakia · Košice"
+    name: "University of Veterinary Medicine and Pharmacy (UVLF)"
+    summary: "Slovakia's only veterinary university, with a programme taught entirely in English. Our team is in touch with its students."
+    alt: "A historic building on the UVLF campus in Košice"
+    facts: ["Veterinary · 6 years", "100% in English", "Entrance exam"]
+    cta: "Discover UVLF"
