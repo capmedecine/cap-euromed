@@ -37,7 +37,7 @@ layout: base
     <span class="tag" style="--dot:var(--papaya)">{{ page.category }}</span>
     <h1 id="g-title">{{ page.h1 }}</h1>
     <p class="lead">{{ page.lead }}</p>
-    <p class="g-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>{{ minutes }} min de lecture</span><span>Mis à jour le {{ page.last_modified_at | default: page.date | date: "%d/%m/%Y" }}</span><span>{% if page.author %}Par <a href="/equipe/">{{ page.author }}</a>, {{ page.author_role }}{% else %}Par <a href="/equipe/">l'équipe Cap EuroMed</a>, étudiants à l'UPJŠ{% endif %}</span></p>
+    <p class="g-meta"><span><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg>{{ minutes }} min de lecture</span><span>Mis à jour le {{ page.last_modified_at | default: page.date | date: "%d/%m/%Y" }}</span><span class="g-by">{% if page.author %}Par <a href="/equipe/">{{ page.author }}</a>, {{ page.author_role }}{% else %}Par <a href="/equipe/">l'équipe Cap EuroMed</a>, étudiants à l'UPJŠ{% endif %}</span></p>
   </div>
   <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
 </section>

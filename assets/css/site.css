@@ -720,3 +720,4 @@ html[lang="en"] .price{gap:1px}
 @media (min-width:1000px) and (max-width:1279px){.display.long{font-size:3.05rem}}
 .plans.single{max-width:560px}
 @media (min-width:820px){.plans.single{grid-template-columns:1fr}}
+.g-meta .g-by{display:inline}
