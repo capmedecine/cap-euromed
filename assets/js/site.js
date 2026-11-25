@@ -65,7 +65,7 @@
     }
     if (frame && collage) {
       const z = Math.min(1, frame.clientWidth / 540);
-      if (Math.abs(z - zoom) > 0.004) { zoom = z; collage.style.zoom = z.toFixed(3); }
+      if (Math.abs(z - zoom) > 0.004) { zoom = z; frame.style.setProperty('--cz', z.toFixed(3)); }
     }
   };
 
