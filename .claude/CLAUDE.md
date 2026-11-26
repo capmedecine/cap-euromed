@@ -28,6 +28,10 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 - `assets/css/site.css`, `assets/js/site.js` : styles et interactions communs. Après modification, incrémenter `asset_version` dans `_config.yml`.
 - `_guides/` : collection d'articles (FR uniquement), publiés sous `/guides/<nom>/` avec le layout `_layouts/guide.html`
   (sommaire, FAQ, sources, données structurées Article). Index : `guides/index.html`.
+- Espace étudiant (révision du test d'entrée) : page cachée `espace-etudiant/app/index.html` (layout `_layouts/espace.html`,
+  `assets/js/espace.js`, `assets/css/espace.css`), comptes et données chez Supabase (`supabase_url` / `supabase_anon_key`
+  dans `_config.yml`). Structure SQL et mode d'emploi : `_supabase/`. La banque de questions de l'UPJŠ ne doit jamais
+  être commitée (dépôt public) : elle s'importe à part dans Supabase.
 - `_brouillons/` : non publié (Jekyll ignore les dossiers en `_`). Contient la page mentions légales en attente des infos de l'éditeur.
 
 ## Notes de travail (non publiées)

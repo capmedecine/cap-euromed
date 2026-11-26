@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#fff3e7">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/lora-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v={{ site.asset_version }}">
+<link rel="stylesheet" href="/assets/css/espace.css?v={{ site.asset_version }}">
+</head>
+<body class="espace">
+<div id="espace">{{ content }}</div>
+<script src="/assets/js/vendor/supabase-2.119.0.js"></script>
+<script>window.ESPACE_CONFIG = { url: {{ site.supabase_url | jsonify }}, key: {{ site.supabase_anon_key | jsonify }} };</script>
+<script type="module" src="/assets/js/espace.js?v={{ site.asset_version }}"></script>
+</body>
+</html>
