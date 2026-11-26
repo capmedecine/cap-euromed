@@ -8,6 +8,8 @@ fr:
   menu_open: Ouvrir le menu
   menu_close: Fermer le menu
   cta_nav: Nous contacter
+  student_label: Espace étudiant
+  student_url: /espace-etudiant/
   wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%2C%20dentaire%20ou%20v%C3%A9t%C3%A9rinaire%20%C3%A0%20l%27%C3%A9tranger%20%21"
   wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20Je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20les%20%C3%A9tudes%20de%20m%C3%A9decine%2C%20dentaire%20ou%20v%C3%A9t%C3%A9rinaire%20%C3%A0%20l%27%C3%A9tranger.%20Pouvez-vous%20m%27en%20dire%20plus%20%3F"
   wa_float_label: Nous écrire sur WhatsApp
@@ -70,6 +72,8 @@ en:
   menu_open: Open menu
   menu_close: Close menu
   cta_nav: Contact us
+  student_label: Student area
+  student_url: /en/student-area/
   wa_short: "https://wa.me/33783119180?text=Hello%2C%20I%27m%20interested%20in%20studying%20medicine%2C%20dentistry%20or%20veterinary%20medicine%20abroad%21"
   wa_long: "https://wa.me/33783119180?text=Hello%20Cap%20EuroMed%20%F0%9F%91%8B%20I%27m%20interested%20in%20studying%20medicine%2C%20dentistry%20or%20veterinary%20medicine%20abroad.%20Could%20you%20tell%20me%20more%3F"
   wa_float_label: Message us on WhatsApp

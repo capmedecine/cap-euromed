@@ -17,7 +17,9 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 - Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN)
   — aujourd'hui `upjs-kosice` (médecine, dentaire) et `uvlf-kosice` (vétérinaire) —,
   `accompagnement/index.html` ↔ `en/support/index.html` (parcours en 5 étapes), `equipe/index.html` ↔ `en/team/index.html` (équipe),
-  `faq/index.html` ↔ `en/faq/index.html` (FAQ), `404.html`, `sitemap.xml` (généré).
+  `faq/index.html` ↔ `en/faq/index.html` (FAQ), `espace-etudiant/index.html` ↔ `en/student-area/index.html`
+  (« En construction », noindex, hors sitemap ; bouton « Espace étudiant » de l'en-tête, lien `student_url` dans `_data/i18n.yml`),
+  `404.html`, `sitemap.xml` (généré).
   L'accompagnement, l'équipe et la FAQ ne sont plus sur l'accueil ; les anciennes ancres `/#accompagnement`, `/#equipe` et `/#faq`
   sont redirigées par `site.js`. Les pages d'université gardent leur propre section « Accompagnement » (pages d'arrivée des pubs).
 - Menu : `nav` dans `_data/i18n.yml`. Une entrée avec `children` (label, note, href) devient un menu déroulant (« Universités »).
