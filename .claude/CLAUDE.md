@@ -12,6 +12,7 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
   penser à y ajouter les nouveaux guides pertinents (maillage interne vers et depuis les pages qui convertissent).
 - `_data/i18n.yml` : textes d'interface FR/EN (menu, pied de page, liens WhatsApp, bloc contact `cta_*`, crédits photos).
 - `_data/universites.yml` : cartes « Nos destinations » de la page d'accueil.
+- `_data/guides_a_venir.yml` : guides annoncés « En cours de création » sur `/guides/` (sans page). Retirer le bloc quand le guide est publié.
 - `_data/faq.yml` : questions/réponses de la page FAQ (FR et EN, mêmes groupes `id`). Les données structurées FAQPage en sont générées.
 - Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN)
   — aujourd'hui `upjs-kosice` (médecine, dentaire) et `uvlf-kosice` (vétérinaire) —,
