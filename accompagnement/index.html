@@ -6,11 +6,31 @@ title: "Notre accompagnement, du projet à l'admission | Cap EuroMed"
 description: "Consultation gratuite, choix de la fac, dossier, préparation au test d'entrée, installation et suivi : comment Cap EuroMed t'accompagne en 5 étapes."
 sitemap: true
 priority: 0.7
+faq:
+  - q: "Le premier échange est-il gratuit ?"
+    a: "Oui. Le premier échange est gratuit et sans engagement : on fait le point sur ton profil, ton niveau et ton projet, et on répond à toutes tes questions honnêtement."
+  - q: "Comment se passent les échanges avec l'équipe ?"
+    a: "Sur WhatsApp, par messages ou par appel, et en visio quand il faut faire le point plus longuement. Une fois sur place, on peut aussi se retrouver à Košice."
+  - q: "Mes parents peuvent-ils participer ?"
+    a: "Oui. Tes parents peuvent nous poser leurs questions et participer aux échanges : partir étudier à l'étranger, c'est souvent un projet qui se décide en famille."
+  - q: "Quand faut-il commencer les démarches ?"
+    a: "Le plus tôt possible, idéalement à l'automne ou en hiver de l'année qui précède ta rentrée. Les facs fixent leur calendrier chaque année : en 2026, le test d'entrée de l'UPJŠ avait lieu en juin et en août, et le dossier se prépare avant."
+  - q: "Est-ce que vous garantissez l'admission ?"
+    a: "Non, et méfie-toi de ceux qui le promettent. C'est la fac qui décide, sur ton dossier et ton test d'entrée. Notre rôle : te préparer au mieux et ne rien laisser au hasard dans ton dossier."
+  - q: "Et si je ne suis pas admis à Košice ?"
+    a: "On te propose d'autres facs, avec un objectif : que tu puisses commencer tes études la même année. On fait le point ensemble sur les options qui correspondent à ton profil."
+  - q: "L'accompagnement continue-t-il après l'admission ?"
+    a: "Oui. On t'aide à t'installer à Košice (logement, banque, enregistrement du séjour, assurance santé), puis on reste disponibles pendant tes études : conseils, et un réseau d'étudiants français sur place."
+  - q: "Pour quelles études proposez-vous un accompagnement ?"
+    a: "La médecine et le dentaire à <a href=\"/universites/upjs-kosice/\">l'UPJŠ de Košice</a>, et le vétérinaire à <a href=\"/universites/uvlf-kosice/\">l'UVLF de Košice</a>. Tu vises une autre fac en Europe ? Parle-nous de ton projet : on te dit honnêtement si on peut t'aider."
 ---
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
   {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://cap-euromed.fr/"},
   {"@type": "ListItem", "position": 2, "name": "Accompagnement", "item": "https://cap-euromed.fr/accompagnement/"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{%- for f in page.faq -%}{"@type": "Question", "name": {{ f.q | jsonify }}, "acceptedAnswer": {"@type": "Answer", "text": {{ f.a | strip_html | jsonify }}}}{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}]}
 </script>
 
 <section class="g-hero" aria-labelledby="page-title">
@@ -79,5 +99,26 @@ priority: 0.7
     </div>
   </div>
 </section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section faq" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-grid">
+    <header class="sec-head" data-reveal>
+      <span class="tag" style="--dot:var(--peri)">Questions fréquentes</span>
+      <h2 class="h2" id="faq-title">Tes questions sur <em>l'accompagnement.</em></h2>
+      <p class="lead">Une autre question&#8239;? Écris-nous sur WhatsApp, on te répond honnêtement.</p>
+    </header>
+    <div class="faq-list" data-reveal style="--d:.1s">
+      {%- for f in page.faq %}
+      <details>
+        <summary>{{ f.q }}<span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary>
+        <div class="faq-a"><p>{{ f.a }}</p></div>
+      </details>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include guides-lies.html slugs="echec-pass-las-que-faire,cout-etudes-medecine-kosice,concours-veto-etudes-veterinaires-etranger,medecine-etranger-revenir-en-france" %}
 
 {% include cta-contact.html %}

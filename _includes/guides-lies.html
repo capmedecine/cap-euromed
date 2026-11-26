@@ -1,0 +1,57 @@
+{%- comment -%}
+  Bloc « Pour aller plus loin » en bas de page.
+  FR : cartes vers les guides listés dans include.slugs (slugs séparés par des virgules, ex. slugs="cout-etudes-medecine-kosice,echec-pass-las-que-faire").
+  EN : les guides n'existent qu'en français, donc cartes fixes vers Our support / Team / FAQ (sauf la page en cours).
+{%- endcomment -%}
+<!-- ===================== POUR ALLER PLUS LOIN ===================== -->
+<section class="section guides-lies" id="guides" aria-labelledby="guides-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      {%- if page.lang == "en" %}
+      <span class="tag" style="--dot:var(--marigold)">Find out more</span>
+      <h2 class="h2" id="guides-title">Everything else <em>you should know.</em></h2>
+      {%- else %}
+      <span class="tag" style="--dot:var(--marigold)">Nos guides</span>
+      <h2 class="h2" id="guides-title">Pour aller <em>plus loin.</em></h2>
+      {%- endif %}
+    </header>
+    <div class="guide-grid">
+      {%- if page.lang == "en" %}
+      {%- unless page.url == "/en/support/" %}
+      <a class="guide-card" href="/en/support/" data-reveal>
+        <span class="tag" style="--dot:var(--peri)">Our support</span>
+        <h3>From your plan to your admission</h3>
+        <p>The 5 steps of our support, from the free consultation to settling in Košice.</p>
+        <span class="dest-go">See the steps<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      {%- endunless %}
+      <a class="guide-card" href="/en/team/" data-reveal>
+        <span class="tag" style="--dot:var(--mint)">The team</span>
+        <h3>Students who've been there</h3>
+        <p>French students living in Košice, who answer your practical questions.</p>
+        <span class="dest-go">Meet the team<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      <a class="guide-card" href="/en/faq/" data-reveal>
+        <span class="tag" style="--dot:var(--sky)">FAQ</span>
+        <h3>Frequently asked questions</h3>
+        <p>Admission, costs, degree recognition: answers to the questions we get asked most.</p>
+        <span class="dest-go">See the FAQ<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      {%- else %}
+      {%- assign slugs = include.slugs | split: "," -%}
+      {%- for slug in slugs %}
+      {%- assign needle = "/guides/" | append: slug | append: "/" -%}
+      {%- assign g = site.guides | where_exp: "x", "x.url == needle" | first -%}
+      {%- if g %}
+      <a class="guide-card" href="{{ g.url }}" data-reveal>
+        <span class="tag" style="--dot:var(--mint)">{{ g.category }}</span>
+        <h3>{{ g.h1 }}</h3>
+        <p>{{ g.excerpt_text }}</p>
+        <span class="dest-go">Lire le guide<svg class="ic" aria-hidden="true"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      {%- endif %}
+      {%- endfor %}
+      {%- endif %}
+    </div>
+  </div>
+</section>

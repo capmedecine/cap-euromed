@@ -6,7 +6,10 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 ## Structure
 - `_layouts/base.html` : `<head>` SEO (title, description, canonical, hreflang, Open Graph), menu, pied de page, bouton WhatsApp flottant.
 - `_includes/` : `nav.html`, `footer.html`, `lang-switch.html` (bouton FR/EN), `sprite.html` (icônes SVG),
-  `cta-contact.html` (carte postale « Contact » en bas de page), `faq-page.html` (gabarit des pages FAQ).
+  `cta-contact.html` (carte postale « Contact » en bas de page), `faq-page.html` (gabarit des pages FAQ),
+  `guides-lies.html` (bloc « Pour aller plus loin », `id="guides"` : en FR, cartes vers les guides passés dans
+  `slugs="slug1,slug2"` ; en EN, cartes fixes vers Our support / Team / FAQ). Utilisé sur les pages des facs et Accompagnement :
+  penser à y ajouter les nouveaux guides pertinents (maillage interne vers et depuis les pages qui convertissent).
 - `_data/i18n.yml` : textes d'interface FR/EN (menu, pied de page, liens WhatsApp, bloc contact `cta_*`, crédits photos).
 - `_data/universites.yml` : cartes « Nos destinations » de la page d'accueil.
 - `_data/faq.yml` : questions/réponses de la page FAQ (FR et EN, mêmes groupes `id`). Les données structurées FAQPage en sont générées.

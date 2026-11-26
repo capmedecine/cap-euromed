@@ -727,3 +727,5 @@ html[lang="en"] .price{gap:1px}
 .foot-wa+.foot-wa{margin-left:22px}
 .foot-gbp .ic{color:#f5a623;fill:#f5a623}
 @media (max-width:519px){.foot-wa+.foot-wa{margin-left:0;display:flex;margin-top:10px}}
+/* Bloc « Pour aller plus loin » : 4 cartes = grille 2 × 2 */
+.guides-lies .guide-grid:has(> :nth-child(4):last-child){grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
