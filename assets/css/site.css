@@ -643,6 +643,9 @@ html[lang="en"] .price{gap:1px}
 .answer-title{font:400 24px/1.1 var(--serif);letter-spacing:-.03em;margin-bottom:10px!important}
 .answer ul{margin-bottom:8px}
 .answer-note{font-size:15px;color:#3a382c;margin:0!important}
+.callout{margin:6px 0 30px;padding:20px 24px 18px;background:var(--peri);background-image:var(--grain);border-radius:4px 4px 24px 4px/4px 4px 10px 4px;box-shadow:var(--sh-paper)}
+.callout-title{font:400 22px/1.2 var(--serif);letter-spacing:-.03em;margin-bottom:8px!important}
+.prose .callout p:last-child{margin-bottom:0}
 .prose .faq-list{margin-bottom:28px}
 .prose .faq-list summary{font-size:17px}
 .prose .faq-a{font-size:16px}
