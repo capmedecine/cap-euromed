@@ -724,3 +724,6 @@ html[lang="en"] .price{gap:1px}
 .plans.single{max-width:560px}
 @media (min-width:820px){.plans.single{grid-template-columns:1fr}}
 .g-meta .g-by{display:inline}
+.foot-wa+.foot-wa{margin-left:22px}
+.foot-gbp .ic{color:#f5a623;fill:#f5a623}
+@media (max-width:519px){.foot-wa+.foot-wa{margin-left:0;display:flex;margin-top:10px}}

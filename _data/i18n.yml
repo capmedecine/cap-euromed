@@ -40,6 +40,8 @@ fr:
       href: /faq/
   footer_about: "Agence d'accompagnement pour les études de médecine, de dentaire et de vétérinaire en Europe, en anglais."
   footer_wa: "WhatsApp : +33 7 83 11 91 80"
+  gbp_url: "https://share.google/aa0cQj19h6jhqdwqx"
+  gbp_label: "Nos avis Google"
   footer_nav_label: Liens du pied de page
   footer_tagline: "Agence d'accompagnement étudiant"
   other_lang: English version
@@ -97,6 +99,8 @@ en:
       href: /en/faq/
   footer_about: "Support agency for studying medicine, dentistry and veterinary medicine in Europe, in English."
   footer_wa: "WhatsApp: +33 7 83 11 91 80"
+  gbp_url: "https://share.google/aa0cQj19h6jhqdwqx"
+  gbp_label: "Our Google reviews"
   footer_nav_label: Footer links
   footer_tagline: "Student support agency"
   other_lang: Version française

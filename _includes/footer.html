@@ -6,6 +6,9 @@
       <a class="logo" href="{{ t.home_url }}"><span class="logo-mark" aria-hidden="true"></span>Cap EuroMed</a>
       <p>{{ t.footer_about }}</p>
       <a class="foot-wa" data-cta="footer" href="{{ wa_long }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>{{ t.footer_wa }}</a>
+      {%- if t.gbp_url %}
+      <a class="foot-wa foot-gbp" href="{{ t.gbp_url }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>{{ t.gbp_label }}</a>
+      {%- endif %}
     </div>
     <nav class="foot-links" aria-label="{{ t.footer_nav_label }}">
       {%- for item in t.nav %}
