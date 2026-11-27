@@ -165,6 +165,11 @@ revoke execute on function public.suivi_etudiants() from public, anon;
 grant execute on function public.enregistrer_reponse(bigint, boolean) to authenticated;
 grant execute on function public.marquer_a_revoir(bigint[]) to authenticated;
 grant execute on function public.suivi_etudiants() to authenticated;
+-- Fonctions internes : creer_profil ne sert qu'au déclencheur d'inscription ;
+-- est_admin sert aux règles RLS des comptes connectés (jamais aux visiteurs sans compte).
+revoke execute on function public.creer_profil() from public, anon, authenticated;
+revoke execute on function public.est_admin() from public, anon;
+grant execute on function public.est_admin() to authenticated;
 
 -- ---------- Ton compte admin ----------
 -- Après t'être invité (Authentication > Users > Invite user), remplace l'adresse
