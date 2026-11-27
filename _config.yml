@@ -26,5 +26,5 @@ defaults:
 
 # Espace étudiant (/espace-etudiant/app/) : projet Supabase. La clé « anon » est publique par conception :
 # les données sont protégées par les règles RLS de _supabase/1-structure.sql.
-supabase_url: ""
-supabase_anon_key: ""
+supabase_url: "https://uxlibtznfrvyyzbshvtk.supabase.co"
+supabase_anon_key: "sb_publishable_80xGjU3yaOA98aD41ca0hg_9rzguRgp"
