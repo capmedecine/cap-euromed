@@ -2,28 +2,83 @@
 layout: base
 lang: en
 alt_url: /espace-etudiant/
-title: "Student area: under construction | Cap EuroMed"
-description: "Cap EuroMed's student area is under construction. Soon, the students we support will prepare for the UPJŠ entrance exam here."
+title: "Student area: prepare for the UPJŠ exam | Cap EuroMed"
+description: "Exam questions, corrections, timed mock exams and progress tracking: the area reserved for the students we support towards UPJŠ in Košice."
 robots: "noindex, follow"
+extra_css: /assets/css/espace.css
+extra_js: /assets/js/apercu.js
+wa_short: "https://wa.me/33783119180?text=Hello%2C%20I%27m%20interested%20in%20your%20support%20and%20the%20UPJ%C5%A0%20entrance%20exam%20preparation%20area%21"
+wa_long: "https://wa.me/33783119180?text=Hello%20Cap%20EuroMed%20%F0%9F%91%8B%20I%20saw%20the%20student%20area%20to%20prepare%20for%20the%20UPJ%C5%A0%20entrance%20exam.%20Could%20you%20tell%20me%20more%20about%20your%20support%3F"
 ---
-<section class="legal">
+<section class="g-hero" aria-labelledby="page-title">
   <div class="wrap">
     <span class="tag" style="--dot:var(--papaya)">Student area</span>
-    <h1 style="margin-top:18px">Your student area is coming soon.</h1>
-    <p class="soon-line"><span class="soon-badge">Under construction</span></p>
-    <section>
-      <h2>What you'll find here</h2>
-      <p>We're building a space for the students we support, to prepare for the UPJŠ entrance exam:</p>
-      <ul>
-        <li>the exam questions, to practise at your own pace;</li>
-        <li>timed mock exams, in real test conditions;</li>
-        <li>your progress: what you've covered and what's left to review.</li>
-      </ul>
-      <p>Already supported by Cap EuroMed? We'll send you your access as soon as it opens.</p>
-    </section>
-    <div class="hero-ctas" style="margin-top:32px">
-      <a class="btn btn-ink" data-cta="student-area" href="{{ site.data.i18n.en.wa_short }}" target="_blank" rel="noopener"><svg class="ic wa-ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>Contact us</a>
-      <a class="btn btn-ghost" href="/en/universities/upjs-kosice/">Discover UPJŠ Košice<svg class="ic go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    <h1 id="page-title">Prepare for the UPJŠ entrance exam, one question at a time.</h1>
+    <p class="lead">The area reserved for the students we support: the exam questions, corrections, timed mock exams and tracking of your progress.</p>
+    <div class="hero-ctas vitrine-ctas">
+      {%- if site.supabase_url != "" %}
+      <a class="btn btn-ink" href="/espace-etudiant/app/">Sign in</a>
+      {%- else %}
+      <span class="soon-badge">Opening soon</span>
+      {%- endif %}
+      <a class="btn btn-ghost" href="#essai">Try 3 questions<svg class="ic go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
     </div>
   </div>
+  <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
 </section>
+
+<section class="section" aria-labelledby="dedans-title">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="tag" style="--dot:var(--mint)">Inside</span>
+      <h2 class="h2" id="dedans-title">What you'll find in your area</h2>
+    </div>
+    <div class="vitrine">
+      <div class="vitrine-item">
+        <div class="vitrine-texte">
+          <h3>Your dashboard</h3>
+          <p>Questions covered, mistakes to review, mock exam results: you know where you stand every day, and what's left to do.</p>
+        </div>
+        <figure class="vitrine-img"><img src="/assets/img/espace/espace-etudiant-accueil-390.webp" srcset="/assets/img/espace/espace-etudiant-accueil-390.webp 390w, /assets/img/espace/espace-etudiant-accueil-780.webp 780w" sizes="(max-width: 600px) 78vw, 320px" width="390" height="760" loading="lazy" decoding="async" alt="Student area dashboard (in French): 214 of 506 questions covered, 53 to review, last mock exam at 78%"></figure>
+      </div>
+      <div class="vitrine-item">
+        <div class="vitrine-texte">
+          <h3>Practice, with corrections</h3>
+          <p>For each question, you mark every statement true or false, then check your answers. The right answer appears, and your mistakes go to "To review" so you can come back to them.</p>
+        </div>
+        <figure class="vitrine-img"><img src="/assets/img/espace/espace-etudiant-entrainement-390.webp" srcset="/assets/img/espace/espace-etudiant-entrainement-390.webp 390w, /assets/img/espace/espace-etudiant-entrainement-780.webp 780w" sizes="(max-width: 600px) 78vw, 320px" width="390" height="760" loading="lazy" decoding="async" alt="A corrected question: correct statements in green, the mistake in red with the right answer"></figure>
+      </div>
+      <div class="vitrine-item">
+        <div class="vitrine-texte">
+          <h3>Mock exams, just like test day</h3>
+          <p>100 questions, 4 statements per question and the clock. At the end, your score against the admission threshold, and the detail of every mistake.</p>
+        </div>
+        <figure class="vitrine-img"><img src="/assets/img/espace/espace-etudiant-examen-390.webp" srcset="/assets/img/espace/espace-etudiant-examen-390.webp 390w, /assets/img/espace/espace-etudiant-examen-780.webp 780w" sizes="(max-width: 600px) 78vw, 320px" width="390" height="760" loading="lazy" decoding="async" alt="A mock exam in progress: question 38 of 100, 47 minutes left"></figure>
+      </div>
+    </div>
+    <p class="vitrine-note">And our team follows your progress: we see where you stand and focus the revision video calls on your weak points.</p>
+  </div>
+</section>
+
+<section class="section apercu-essai" id="essai" aria-labelledby="essai-title">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="tag" style="--dot:var(--marigold)">Your turn</span>
+      <h2 class="h2" id="essai-title">Try 3 questions</h2>
+      <p class="lead">In the test format: true or false for each statement. Sample questions written by our team.</p>
+    </div>
+    <div class="apercu-demo" id="apercu-demo"><noscript><p class="vitrine-note">Turn on JavaScript to try the questions.</p></noscript></div>
+    <script type="application/json" id="apercu-data">
+{"textes": {"question": "Question", "proposition": "Statement", "vrai": "True", "faux": "False", "reponse": "Answer", "corriger": "Check", "suivante": "Next question", "resultat": "See my result", "encore": "{n} left to mark", "pret": "All marked: you can check your answers.", "bien_jugees": "statements marked correctly", "fin": "You marked {n} statements out of {max} correctly.", "fin_texte": "In the student area, you practise on hundreds of questions like these, with corrections, your mistakes to review and timed mock exams. It is reserved for the students we support.", "recommencer": "Start again"},
+ "contact": {"url": "{{ page.wa_long }}", "label": "Talk to us"},
+ "questions": [
+  {"matiere": "Chemistry", "enonce": "Which of the following statements about the water molecule (H₂O) are true?", "props": [["The oxygen atom has two lone electron pairs.", true], ["The molecule is linear.", false], ["The H–O–H bond angle is about 104.5°.", true], ["The molecule is non-polar.", false]]},
+  {"matiere": "Biology", "enonce": "Which of the following statements about DNA are true?", "props": [["DNA contains the base uracil.", false], ["The two strands of DNA are antiparallel.", true], ["In DNA, adenine pairs with thymine.", true], ["DNA replication is conservative.", false]]},
+  {"matiere": "Chemistry", "enonce": "Concerning acids and bases in aqueous solution at 25 °C:", "props": [["A solution with pH 3 is acidic.", true], ["A solution with pH 12 is acidic.", false], ["HCl is a weak acid.", false], ["NaOH is a strong base.", true]]}
+ ]}
+    </script>
+    <p class="vitrine-note">Want to know how the real test works? Read our page on <a href="/en/universities/upjs-kosice/#faq">UPJŠ Košice</a>.</p>
+  </div>
+</section>
+
+{% include cta-contact.html %}

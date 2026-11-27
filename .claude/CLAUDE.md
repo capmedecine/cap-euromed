@@ -18,7 +18,9 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
   — aujourd'hui `upjs-kosice` (médecine, dentaire) et `uvlf-kosice` (vétérinaire) —,
   `accompagnement/index.html` ↔ `en/support/index.html` (parcours en 5 étapes), `equipe/index.html` ↔ `en/team/index.html` (équipe),
   `faq/index.html` ↔ `en/faq/index.html` (FAQ), `espace-etudiant/index.html` ↔ `en/student-area/index.html`
-  (« En construction », noindex, hors sitemap ; bouton « Espace étudiant » de l'en-tête, lien `student_url` dans `_data/i18n.yml`),
+  (vitrine avant connexion : captures `assets/img/espace/` faites avec des données fictives, mini-démo `assets/js/apercu.js`
+  avec 3 questions écrites par nous ; badge « Ouverture prochaine », remplacé par « Se connecter » dès que `supabase_url`
+  est renseigné ; noindex, hors sitemap ; bouton « Espace étudiant » de l'en-tête, lien `student_url` dans `_data/i18n.yml`),
   `404.html`, `sitemap.xml` (généré).
   L'accompagnement, l'équipe et la FAQ ne sont plus sur l'accueil ; les anciennes ancres `/#accompagnement`, `/#equipe` et `/#faq`
   sont redirigées par `site.js`. Les pages d'université gardent leur propre section « Accompagnement » (pages d'arrivée des pubs).
@@ -41,7 +43,8 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 ## Front matter d'une page
 `layout: base`, `lang: fr|en`, `alt_url` (page équivalente dans l'autre langue, sert au bouton FR/EN et aux hreflang),
 `title` (≤ 60 caractères), `description` (≤ 155), `sitemap: true`, `priority`, et optionnellement `og_title`, `og_description`, `og_image`,
-`wa_short` / `wa_long` (message WhatsApp pré-rempli spécifique à la page), `robots`, `verification: true` (accueil FR uniquement).
+`wa_short` / `wa_long` (message WhatsApp pré-rempli spécifique à la page), `robots`, `verification: true` (accueil FR uniquement),
+`extra_css` / `extra_js` (feuille de style ou script en plus pour cette page seulement).
 
 ## Ajouter une université
 1. Copier `universites/upjs-kosice/` vers `universites/<slug>/` et `en/universities/upjs-kosice/` vers `en/universities/<slug>/`, puis réécrire le contenu.

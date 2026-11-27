@@ -2,28 +2,83 @@
 layout: base
 lang: fr
 alt_url: /en/student-area/
-title: "Espace étudiant : en construction | Cap EuroMed"
-description: "L'espace étudiant de Cap EuroMed est en construction. Bientôt, les étudiants accompagnés y prépareront le test d'entrée de l'UPJŠ."
+title: "Espace étudiant : prépare le test de l'UPJŠ | Cap EuroMed"
+description: "Questions du test, correction, examens blancs chronométrés et suivi : l'espace réservé aux étudiants que nous accompagnons vers l'UPJŠ de Košice."
 robots: "noindex, follow"
+extra_css: /assets/css/espace.css
+extra_js: /assets/js/apercu.js
+wa_short: "https://wa.me/33783119180?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%28e%29%20par%20votre%20accompagnement%20et%20l%27espace%20de%20pr%C3%A9paration%20au%20test%20d%27entr%C3%A9e%20de%20l%27UPJ%C5%A0%20%21"
+wa_long: "https://wa.me/33783119180?text=Bonjour%20Cap%20EuroMed%20%F0%9F%91%8B%20J%27ai%20vu%20l%27espace%20%C3%A9tudiant%20pour%20pr%C3%A9parer%20le%20test%20d%27entr%C3%A9e%20de%20l%27UPJ%C5%A0.%20Pouvez-vous%20m%27en%20dire%20plus%20sur%20votre%20accompagnement%20%3F"
 ---
-<section class="legal">
+<section class="g-hero" aria-labelledby="page-title">
   <div class="wrap">
     <span class="tag" style="--dot:var(--papaya)">Espace étudiant</span>
-    <h1 style="margin-top:18px">Ton espace étudiant arrive bientôt.</h1>
-    <p class="soon-line"><span class="soon-badge">En construction</span></p>
-    <section>
-      <h2>Ce que tu y trouveras</h2>
-      <p>On prépare un espace réservé aux étudiants que nous accompagnons, pour réviser le test d'entrée de l'UPJŠ&nbsp;:</p>
-      <ul>
-        <li>les questions du test, pour t'entraîner à ton rythme&nbsp;;</li>
-        <li>des examens blancs chronométrés, dans les conditions du jour J&nbsp;;</li>
-        <li>ton suivi&nbsp;: ce que tu as déjà travaillé et ce qu'il te reste à revoir.</li>
-      </ul>
-      <p>Tu es accompagné par Cap EuroMed&#8239;? On t'envoie ton accès dès l'ouverture.</p>
-    </section>
-    <div class="hero-ctas" style="margin-top:32px">
-      <a class="btn btn-ink" data-cta="espace-etudiant" href="{{ site.data.i18n.fr.wa_short }}" target="_blank" rel="noopener"><svg class="ic wa-ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>Nous contacter</a>
-      <a class="btn btn-ghost" href="/guides/test-entree-upjs-kosice/">Lire le guide du test d'entrée<svg class="ic go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+    <h1 id="page-title">Prépare le test d'entrée de l'UPJŠ, question après question.</h1>
+    <p class="lead">L'espace réservé aux étudiants que nous accompagnons&nbsp;: les questions du test, la correction, des examens blancs chronométrés et le suivi de ta progression.</p>
+    <div class="hero-ctas vitrine-ctas">
+      {%- if site.supabase_url != "" %}
+      <a class="btn btn-ink" href="/espace-etudiant/app/">Se connecter</a>
+      {%- else %}
+      <span class="soon-badge">Ouverture prochaine</span>
+      {%- endif %}
+      <a class="btn btn-ghost" href="#essai">Essayer 3 questions<svg class="ic go" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
     </div>
   </div>
+  <svg class="hero-torn" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true"><use href="#torn"/></svg>
 </section>
+
+<section class="section" aria-labelledby="dedans-title">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="tag" style="--dot:var(--mint)">À l'intérieur</span>
+      <h2 class="h2" id="dedans-title">Ce que tu trouveras dans ton espace</h2>
+    </div>
+    <div class="vitrine">
+      <div class="vitrine-item">
+        <div class="vitrine-texte">
+          <h3>Ton tableau de bord</h3>
+          <p>Questions travaillées, erreurs à revoir, résultats de tes examens blancs&nbsp;: tu sais où tu en es chaque jour, et ce qu'il te reste à faire.</p>
+        </div>
+        <figure class="vitrine-img"><img src="/assets/img/espace/espace-etudiant-accueil-390.webp" srcset="/assets/img/espace/espace-etudiant-accueil-390.webp 390w, /assets/img/espace/espace-etudiant-accueil-780.webp 780w" sizes="(max-width: 600px) 78vw, 320px" width="390" height="760" loading="lazy" decoding="async" alt="Tableau de bord de l'espace étudiant : 214 questions travaillées sur 506, 53 à revoir, dernier examen blanc à 78 %"></figure>
+      </div>
+      <div class="vitrine-item">
+        <div class="vitrine-texte">
+          <h3>L'entraînement, avec la correction</h3>
+          <p>Pour chaque question, tu dis si chaque proposition est vraie ou fausse, puis tu corriges. La bonne réponse s'affiche, et tes erreurs vont dans «&nbsp;À revoir&nbsp;» pour y revenir plus tard.</p>
+        </div>
+        <figure class="vitrine-img"><img src="/assets/img/espace/espace-etudiant-entrainement-390.webp" srcset="/assets/img/espace/espace-etudiant-entrainement-390.webp 390w, /assets/img/espace/espace-etudiant-entrainement-780.webp 780w" sizes="(max-width: 600px) 78vw, 320px" width="390" height="760" loading="lazy" decoding="async" alt="Question corrigée : les propositions bien jugées en vert, l'erreur en rouge avec la bonne réponse"></figure>
+      </div>
+      <div class="vitrine-item">
+        <div class="vitrine-texte">
+          <h3>Des examens blancs comme le jour J</h3>
+          <p>100 questions, 4 propositions par question et le chrono. À la fin, ton score face au seuil d'admission, et le détail de chaque erreur.</p>
+        </div>
+        <figure class="vitrine-img"><img src="/assets/img/espace/espace-etudiant-examen-390.webp" srcset="/assets/img/espace/espace-etudiant-examen-390.webp 390w, /assets/img/espace/espace-etudiant-examen-780.webp 780w" sizes="(max-width: 600px) 78vw, 320px" width="390" height="760" loading="lazy" decoding="async" alt="Examen blanc en cours : question 38 sur 100, 47 minutes restantes"></figure>
+      </div>
+    </div>
+    <p class="vitrine-note">Et notre équipe suit ta progression&nbsp;: elle voit où tu en es et cible les visios de révision sur tes points faibles.</p>
+  </div>
+</section>
+
+<section class="section apercu-essai" id="essai" aria-labelledby="essai-title">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="tag" style="--dot:var(--marigold)">À toi de jouer</span>
+      <h2 class="h2" id="essai-title">Essaie 3 questions</h2>
+      <p class="lead">Au format du test&nbsp;: pour chaque proposition, vrai ou faux. Questions d'exemple écrites par notre équipe.</p>
+    </div>
+    <div class="apercu-demo" id="apercu-demo"><noscript><p class="vitrine-note">Active JavaScript pour essayer les questions.</p></noscript></div>
+    <script type="application/json" id="apercu-data">
+{"textes": {"question": "Question", "proposition": "Proposition", "vrai": "Vrai", "faux": "Faux", "reponse": "Réponse", "corriger": "Corriger", "suivante": "Question suivante", "resultat": "Voir mon résultat", "encore": "Encore {n} à juger", "pret": "Tout est jugé : tu peux corriger.", "bien_jugees": "propositions bien jugées", "fin": "Tu as bien jugé {n} propositions sur {max}.", "fin_texte": "Dans l'espace étudiant, tu t'entraînes sur des centaines de questions comme celles-ci, avec la correction, tes erreurs à revoir et des examens blancs chronométrés. Il est réservé aux étudiants que nous accompagnons.", "recommencer": "Recommencer"},
+ "contact": {"url": "{{ page.wa_long }}", "label": "En parler avec nous"},
+ "questions": [
+  {"matiere": "Chimie", "enonce": "Which of the following statements about the water molecule (H₂O) are true?", "props": [["The oxygen atom has two lone electron pairs.", true], ["The molecule is linear.", false], ["The H–O–H bond angle is about 104.5°.", true], ["The molecule is non-polar.", false]]},
+  {"matiere": "Biologie", "enonce": "Which of the following statements about DNA are true?", "props": [["DNA contains the base uracil.", false], ["The two strands of DNA are antiparallel.", true], ["In DNA, adenine pairs with thymine.", true], ["DNA replication is conservative.", false]]},
+  {"matiere": "Chimie", "enonce": "Concerning acids and bases in aqueous solution at 25 °C:", "props": [["A solution with pH 3 is acidic.", true], ["A solution with pH 12 is acidic.", false], ["HCl is a weak acid.", false], ["NaOH is a strong base.", true]]}
+ ]}
+    </script>
+    <p class="vitrine-note">Comment se passe le vrai test&#8239;? Lis notre <a href="/guides/test-entree-upjs-kosice/">guide du test d'entrée de l'UPJŠ</a>.</p>
+  </div>
+</section>
+
+{% include cta-contact.html %}

@@ -43,11 +43,17 @@
 <link rel="preload" href="/assets/fonts/lora-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/figtree-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={{ site.asset_version }}">
+{%- if page.extra_css %}
+<link rel="stylesheet" href="{{ page.extra_css }}?v={{ site.asset_version }}">
+{%- endif %}
 {%- if site.plausible_domain != "" %}
 <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
 {%- endif %}
 <script>document.documentElement.classList.add('js')</script>
 <script src="/assets/js/site.js?v={{ site.asset_version }}" defer></script>
+{%- if page.extra_js %}
+<script src="{{ page.extra_js }}?v={{ site.asset_version }}" defer></script>
+{%- endif %}
 </head>
 <body>
 <a class="skip" href="#contenu">{{ t.skip }}</a>

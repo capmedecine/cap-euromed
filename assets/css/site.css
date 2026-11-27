@@ -463,7 +463,7 @@ details[open] .pm{rotate:45deg;background:var(--mint)}
 /* ==========================================================================
    CONTACT (carte postale)
    ========================================================================== */
-.cta{position:relative;background:linear-gradient(180deg,#d1eef9 0%,#bfe5f6 50%,#9ed4ef 100%);isolation:isolate}
+.cta{position:relative;background:linear-gradient(180deg,#d1eef9 0%,#bfe5f6 50%,#9ed4ef 100%);isolation:isolate;overflow-x:clip}
 .cta::before{content:"";position:absolute;inset:0;z-index:-1;background-image:var(--grain);opacity:.6}
 .cta-torn{position:absolute;left:0;width:100%;height:44px;pointer-events:none}
 .cta-torn.top{top:-1px;transform:scaleY(-1)}
@@ -544,6 +544,29 @@ details[open] .pm{rotate:45deg;background:var(--mint)}
 @media (max-width:1099px){.nav.open .nav-links .nav-student-menu{display:flex;align-items:center;gap:10px}}
 .nav-student-menu .ic{width:20px;height:20px;flex:none}
 @media (min-width:1100px) and (max-width:1279px){.nav-in{gap:10px}.logo{margin-right:20px}}
+/* Page Espace étudiant : vitrine avant connexion (captures + mini-démo, styles de démo dans espace.css) */
+.vitrine-ctas{margin-top:30px}
+.vitrine{display:grid;gap:clamp(48px,7vw,96px);max-width:960px;margin:clamp(40px,6vw,64px) auto 0}
+.vitrine-item{display:grid;gap:26px;align-items:center;justify-items:center;text-align:center}
+.vitrine-texte{max-width:30em}
+.vitrine-texte h3{font:400 clamp(1.6rem,1.2rem + 1.4vw,2.25rem)/1.12 var(--serif);letter-spacing:-.03em}
+.vitrine-texte p{margin-top:14px;font-size:clamp(1.02rem,.98rem + .25vw,1.15rem);line-height:1.6;color:var(--graphite)}
+.vitrine-img{margin:0;width:min(78vw,320px);padding:8px;border-radius:32px;background:#fff;box-shadow:var(--sh-xl)}
+.vitrine-img img{display:block;width:100%;height:auto;border-radius:24px}
+@media (min-width:860px){
+  .vitrine-item{grid-template-columns:minmax(0,1fr) 300px;gap:clamp(40px,6vw,80px);text-align:left;justify-items:stretch}
+  .vitrine-item:nth-child(even){grid-template-columns:300px minmax(0,1fr)}
+  .vitrine-item:nth-child(even) .vitrine-img{order:-1}
+  .vitrine-item .vitrine-texte{justify-self:stretch;max-width:none}
+  .vitrine-img{width:100%}
+}
+.vitrine-note{max-width:40em;margin:clamp(40px,5vw,56px) auto 0;text-align:center;font-size:16px;line-height:1.6;color:var(--graphite)}
+.vitrine-note a{color:var(--ink);text-underline-offset:3px}
+.apercu-essai{padding-top:0}
+.apercu-demo{max-width:720px;margin:clamp(28px,4vw,44px) auto 0;scroll-margin-top:96px}
+.apercu-demo .es-entete-q{justify-content:center}
+.apercu-demo .es-question{margin-top:12px}
+.apercu-demo .es-actions{margin-bottom:0}
 .soon-line{margin-top:18px}
 
 /* Note sous les tarifs */
