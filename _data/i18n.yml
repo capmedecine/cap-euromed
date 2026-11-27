@@ -48,7 +48,7 @@ fr:
   footer_tagline: "Agence d'accompagnement étudiant"
   other_lang: English version
   credits_title: Crédits photos
-  og_image: /assets/og-image.jpg
+  og_image: /assets/og-cap-euromed.jpg
   og_locale: fr_FR
   og_locale_alt: en_GB
   credits_html: |
@@ -109,7 +109,7 @@ en:
   footer_tagline: "Student support agency"
   other_lang: Version française
   credits_title: Photo credits
-  og_image: /assets/og-image-en.jpg
+  og_image: /assets/og-cap-euromed-en.jpg
   og_locale: en_GB
   og_locale_alt: fr_FR
   credits_html: |

@@ -35,6 +35,10 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
   dans `_config.yml`). Structure SQL et mode d'emploi : `_supabase/`. La banque de questions de l'UPJŠ ne doit jamais
   être commitée (dépôt public) : elle s'importe à part dans Supabase.
 - `_brouillons/` : non publié (Jekyll ignore les dossiers en `_`). Contient la page mentions légales en attente des infos de l'éditeur.
+- `_outils/visuels/` : non publié. Gabarit `visuel.html` + `rendu.js` (`NODE_PATH=$(npm root -g) node rendu.js`) qui génère les images
+  d'aperçu du site (`assets/og-cap-euromed.jpg` et `-en.jpg`, référencées dans `_data/i18n.yml` et le JSON-LD des accueils),
+  la photo de profil et la couverture Facebook. À relancer si le titre de l'accueil change, en renommant les images d'aperçu
+  (Facebook garde l'ancienne en cache tant que l'adresse ne change pas). Photos utilisées : théâtre de Košice (CC0) et Unsplash, sans crédit à afficher.
 
 ## Notes de travail (non publiées)
 - `.claude/notes/plan-reseaux-sociaux.md` : plan réseaux sociaux mis de côté. Le ressortir dès que l'utilisateur parle de

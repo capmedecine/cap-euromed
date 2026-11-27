@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Lora";src:url(../../assets/fonts/lora-400.woff2) format("woff2");font-weight:400;font-style:normal}
+@font-face{font-family:"Lora";src:url(../../assets/fonts/lora-400i.woff2) format("woff2");font-weight:400;font-style:italic}
+@font-face{font-family:"Figtree";src:url(../../assets/fonts/figtree-400.woff2) format("woff2");font-weight:400}
+@font-face{font-family:"Figtree";src:url(../../assets/fonts/figtree-500.woff2) format("woff2");font-weight:500}
+:root{--ink:#030302;--graphite:#41413f;--papaya:#ff4500;--marigold:#fde99b;--mint:#9bd8a9}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{overflow:hidden}
+body{position:relative;font-family:Figtree,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;
+  background:
+    radial-gradient(55% 60% at 88% 4%,rgba(255,255,255,.6),rgba(255,255,255,0) 70%),
+    radial-gradient(45% 55% at 6% 100%,rgba(255,255,255,.5),rgba(255,255,255,0) 70%),
+    linear-gradient(180deg,#a3d4ee 0%,#c6e7f6 55%,#daf0fa 100%)}
+body.avatar{background:var(--ink)}
+.logo{position:absolute;display:flex;align-items:center;gap:.42em;font:400 var(--fs)/1 Lora,serif;letter-spacing:-.035em}
+.logo svg{width:1.3em;height:1.3em;flex:none}
+.pill{position:absolute;display:inline-flex;align-items:center;gap:.6em;background:#fff;border-radius:999px;padding:.62em 1.05em;font:500 var(--fs)/1 Figtree,sans-serif;letter-spacing:-.01em;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.pill::before{content:"";width:.55em;height:.55em;border-radius:50%;background:var(--papaya)}
+h1{position:absolute;font:400 var(--fs)/1.13 Lora,serif;letter-spacing:-.035em;font-weight:400}
+h1>span{display:block;white-space:nowrap}
+.hl{background:linear-gradient(var(--marigold),var(--marigold)) 0 88%/100% 36% no-repeat;padding:0 .06em;margin:0 -.06em}
+h1 em{font-style:italic}
+.bottom{position:absolute;font:400 var(--fs)/1.3 Figtree,sans-serif;color:var(--graphite);white-space:nowrap}
+.bottom b{font-weight:500;color:var(--ink)}
+.pola{position:absolute;background:#fff;padding:var(--pp) var(--pp) calc(var(--pp) * 3.3);box-shadow:0 18px 40px rgba(20,50,80,.2),0 2px 6px rgba(0,0,0,.1)}
+.pola .ph{width:100%;height:100%;overflow:hidden;background:#ddd}
+.pola img{display:block;width:100%;height:100%;object-fit:cover}
+.pola figcaption{position:absolute;left:var(--pp);bottom:calc(var(--pp) * 1.05);font:italic 400 var(--cap)/1 Lora,serif;color:var(--graphite);white-space:nowrap}
+.tape{position:absolute;left:50%;top:calc(var(--pp) * -1.25);width:var(--tw);height:calc(var(--pp) * 2.3);translate:-50% 0;rotate:var(--tr);background:var(--tc);opacity:.88;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.note{position:absolute;background:var(--marigold);background-image:linear-gradient(160deg,rgba(255,255,255,.38),rgba(255,255,255,0) 42%);border-radius:3px 3px 22px 3px/3px 3px 8px 3px;box-shadow:0 14px 30px rgba(20,50,80,.18),0 2px 4px rgba(0,0,0,.08);padding:var(--np)}
+.note strong{display:block;font:400 var(--fs)/1.08 Lora,serif;letter-spacing:-.025em;font-weight:400}
+.note span{display:block;margin-top:.75em;font:400 var(--fs2)/1.3 Figtree,sans-serif;color:#2a2a28}
+.cross{position:absolute;inset:0;display:grid;place-items:center}
+</style></head>
+<body>
+<script>
+const P = new URLSearchParams(location.search);
+const fmt = P.get('fmt'), lang = P.get('lang') || 'fr';
+const T = {
+  fr: { pill: "Études de médecine, dentaire et vétérinaire",
+        h1: ["Deviens médecin,", "<span class='hl'>dentiste ou vétérinaire,</span>", "<em>sans concours français.</em>"],
+        bottom: "<b>UPJŠ et UVLF, Košice</b> · cours en anglais · accompagnement de A à Z",
+        c1: "Košice, ta future ville", c2: "Toi, dans 6 ans ?",
+        n1: "Pas de PASS,<br>pas de LAS.", n2: "Admission sur dossier<br>+ test d'entrée." },
+  en: { pill: "Studying medicine, dentistry or vet abroad",
+        h1: ["Become a doctor,", "<span class='hl'>dentist or vet,</span>", "<em>without French exams.</em>"],
+        bottom: "<b>UPJŠ &amp; UVLF, Košice</b> · taught in English · support from start to finish",
+        c1: "Košice, your future city", c2: "You, in 6 years?",
+        n1: "No PASS,<br>no LAS.", n2: "Admission on application<br>+ entrance exam." }
+}[lang];
+const MARK = "<svg viewBox='0 0 64 64' aria-hidden='true'><rect width='64' height='64' rx='14' fill='#030302'/><rect x='25' y='15.4' width='14' height='33.2' rx='2.4' fill='#ff4500'/><rect x='15.4' y='25' width='33.2' height='14' rx='2.4' fill='#ff4500'/></svg>";
+const IMG = '../../assets/img/';
+// L = mise en page par format (px)
+const L = {
+  og:    { w:1200, h:630, logo:[64,48,30], pill:[64,138,18], h1:[64,200,56], bottom:[64,556,20],
+           p1:{x:700,y:150,w:330,h:300,r:-4,pp:13,cap:19,tw:110,tc:'#fde99b',tr:'-3deg'},
+           p2:{x:972,y:62,w:200,h:290,r:5,pp:12,cap:17,tw:96,tc:'#9bd8a9',tr:'4deg'},
+           note:{x:936,y:388,w:226,r:3,np:'20px 22px 22px',fs:30,fs2:15.5} },
+  cover: { w:1640, h:924, logo:[150,210,40], pill:[150,314,22], h1:[150,388,70], bottom:[150,678,24],
+           p1:{x:1010,y:264,w:380,h:340,r:-4,pp:15,cap:22,tw:128,tc:'#fde99b',tr:'-3deg'},
+           p2:{x:1304,y:194,w:230,h:330,r:5,pp:13,cap:19,tw:108,tc:'#9bd8a9',tr:'4deg'},
+           note:{x:1262,y:514,w:262,r:3,np:'22px 24px 24px',fs:34,fs2:17.5} }
+};
+if (fmt === 'avatar') {
+  document.body.className = 'avatar';
+  document.body.style.cssText = 'width:1080px;height:1080px';
+  document.body.innerHTML = "<div class='cross'><svg width='1080' height='1080' viewBox='0 0 1080 1080'><rect x='422' y='260' width='236' height='560' rx='40' fill='#ff4500'/><rect x='260' y='422' width='560' height='236' rx='40' fill='#ff4500'/></svg></div>";
+} else {
+  const c = L[fmt];
+  document.body.style.cssText = `width:${c.w}px;height:${c.h}px`;
+  const pos = (a) => `left:${a[0]}px;top:${a[1]}px;--fs:${a[2]}px`;
+  const pola = (p, src, cap, objpos) => `<figure class='pola' style='left:${p.x}px;top:${p.y}px;width:${p.w}px;height:${p.h}px;rotate:${p.r}deg;--pp:${p.pp}px;--cap:${p.cap}px;--tw:${p.tw}px;--tc:${p.tc};--tr:${p.tr}'><div class='ph'><img src='${IMG + src}' style='object-position:${objpos}' alt=''></div><figcaption>${cap}</figcaption><span class='tape'></span></figure>`;
+  document.body.innerHTML =
+    `<div class='logo' style='${pos(c.logo)}'>${MARK}Cap EuroMed</div>` +
+    `<div class='pill' style='${pos(c.pill)}'>${T.pill}</div>` +
+    `<h1 style='${pos(c.h1)}'>${T.h1.map((l) => `<span>${l}</span>`).join('')}</h1>` +
+    `<p class='bottom' style='${pos(c.bottom)}'>${T.bottom}</p>` +
+    pola(c.p1, 'kosice-theatre-national-fontaine-960.webp', T.c1, '50% 40%') +
+    pola(c.p2, 'etudiant-medecine-stethoscope-720.webp', T.c2, '60% 20%') +
+    `<div class='note' style='left:${c.note.x}px;top:${c.note.y}px;width:${c.note.w}px;rotate:${c.note.r}deg;--np:${c.note.np};--fs:${c.note.fs}px;--fs2:${c.note.fs2}px;padding:${c.note.np}'><strong>${T.n1}</strong><span>${T.n2}</span></div>`;
+}
+</script>
+</body></html>
