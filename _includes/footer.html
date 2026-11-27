@@ -9,6 +9,15 @@
       {%- if t.gbp_url %}
       <a class="foot-wa foot-gbp" href="{{ t.gbp_url }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>{{ t.gbp_label }}</a>
       {%- endif %}
+      {%- assign reseaux = site.data.reseaux | where_exp: "r", "r.url != ''" %}
+      {%- if reseaux.size > 0 %}
+      <div class="foot-social" role="group" aria-label="{{ t.social_label }}">
+        <span aria-hidden="true">{{ t.social_title }}</span>
+        {%- for r in reseaux %}
+        <a href="{{ r.url }}" target="_blank" rel="noopener" aria-label="{{ t.social_on | replace: '%s', r.nom }}" title="{{ r.nom }}"><svg class="ic" aria-hidden="true"><use href="#{{ r.icone }}"/></svg></a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
     </div>
     <nav class="foot-links" aria-label="{{ t.footer_nav_label }}">
       {%- for item in t.nav %}

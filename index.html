@@ -49,7 +49,7 @@ verification: true
     ]
   },
   "areaServed": "FR",
-  "sameAs": [{{ t.gbp_url | jsonify }}]
+  "sameAs": [{{ t.gbp_url | jsonify }}{% for r in site.data.reseaux %}{% if r.url != "" %}, {{ r.url | jsonify }}{% endif %}{% endfor %}]
 }
 </script>
 

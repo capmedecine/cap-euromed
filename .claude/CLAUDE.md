@@ -14,6 +14,8 @@ Pas d'étape de build à lancer avant de publier : on modifie les sources, on po
 - `_data/universites.yml` : cartes « Nos destinations » de la page d'accueil.
 - `_data/guides_a_venir.yml` : guides annoncés « En cours de création » sur `/guides/` (sans page). Retirer le bloc quand le guide est publié.
 - `_data/faq.yml` : questions/réponses de la page FAQ (FR et EN, mêmes groupes `id`). Les données structurées FAQPage en sont générées.
+- `_data/reseaux.yml` : comptes Instagram, TikTok et Facebook (icônes du pied de page + `sameAs` du JSON-LD des deux accueils).
+  Adresses sans paramètres de suivi ; icônes `i-instagram`, `i-tiktok`, `i-facebook` dans `sprite.html` (Simple Icons, CC0).
 - Pages : `index.html` (accueil FR), `en/index.html` (accueil EN), `universites/<slug>/index.html` (FR), `en/universities/<slug>/index.html` (EN)
   — aujourd'hui `upjs-kosice` (médecine, dentaire) et `uvlf-kosice` (vétérinaire) —,
   `accompagnement/index.html` ↔ `en/support/index.html` (parcours en 5 étapes), `equipe/index.html` ↔ `en/team/index.html` (équipe),

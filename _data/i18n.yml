@@ -44,6 +44,9 @@ fr:
   footer_wa: "WhatsApp : +33 7 83 11 91 80"
   gbp_url: "https://share.google/aa0cQj19h6jhqdwqx"
   gbp_label: "Nos avis Google"
+  social_title: "Suis-nous"
+  social_label: "Cap EuroMed sur les réseaux sociaux"
+  social_on: "Cap EuroMed sur %s"
   footer_nav_label: Liens du pied de page
   footer_tagline: "Agence d'accompagnement étudiant"
   other_lang: English version
@@ -105,6 +108,9 @@ en:
   footer_wa: "WhatsApp: +33 7 83 11 91 80"
   gbp_url: "https://share.google/aa0cQj19h6jhqdwqx"
   gbp_label: "Our Google reviews"
+  social_title: "Follow us"
+  social_label: "Cap EuroMed on social media"
+  social_on: "Cap EuroMed on %s"
   footer_nav_label: Footer links
   footer_tagline: "Student support agency"
   other_lang: Version française

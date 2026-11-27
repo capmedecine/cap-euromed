@@ -1,0 +1,13 @@
+# Comptes de Cap EuroMed sur les réseaux sociaux.
+# Servent aux icônes du pied de page et aux données structurées des accueils (sameAs), pour que Google relie les profils au site.
+# Adresses sans les paramètres de suivi ajoutés par les applis (?_r=…, ?cnvx=…). url vide = réseau masqué.
+# Icônes (sprite.html) : tracés Simple Icons, licence CC0.
+- nom: Instagram
+  icone: i-instagram
+  url: "https://www.instagram.com/cap_euromed/"
+- nom: TikTok
+  icone: i-tiktok
+  url: "https://www.tiktok.com/@capeuromed"
+- nom: Facebook
+  icone: i-facebook
+  url: "https://www.facebook.com/profile.php?id=61590435226386"
